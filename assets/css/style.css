@@ -636,6 +636,147 @@ h2:last-of-type + ul li:hover {
 }
 
 /* ===========================
+   Dark Mode - Forest Green Dark Theme
+   =========================== */
+
+/* Dark mode variables */
+:root[data-theme="dark"] {
+    --primary-color: #4ade80;
+    --secondary-color: #22c55e;
+    --accent-color: #16a34a;
+    --text-color: #e2e8f0;
+    --text-light: #94a3b8;
+    --border-color: #334155;
+    --bg-color: #0f172a;
+    --section-bg: #1e293b;
+    --link-color: #4ade80;
+    --link-hover: #86efac;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Auto dark mode - respects system preference */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #4ade80;
+        --secondary-color: #22c55e;
+        --accent-color: #16a34a;
+        --text-color: #e2e8f0;
+        --text-light: #94a3b8;
+        --border-color: #334155;
+        --bg-color: #0f172a;
+        --section-bg: #1e293b;
+        --link-color: #4ade80;
+        --link-hover: #86efac;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Dark mode specific overrides */
+:root[data-theme="dark"] .content,
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .content {
+        border: 1px solid var(--border-color);
+    }
+}
+
+/* Table header in dark mode */
+:root[data-theme="dark"] thead {
+    background-color: #1e3a2f;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) thead {
+        background-color: #1e3a2f;
+    }
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    background-color: var(--section-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.theme-toggle:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(15deg);
+}
+
+/* Sun icon (shown in dark mode) */
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+/* Moon icon (shown in light mode) */
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle .sun-icon {
+    display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle .moon-icon {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .sun-icon {
+        display: block;
+    }
+    :root:not([data-theme="light"]) .theme-toggle .moon-icon {
+        display: none;
+    }
+}
+
+/* Hide toggle button in print */
+@media print {
+    .theme-toggle {
+        display: none !important;
+    }
+}
+
+/* Responsive toggle positioning */
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* ===========================
    Accessibility
    =========================== */
 
