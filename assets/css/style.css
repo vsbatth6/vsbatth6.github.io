@@ -709,6 +709,11 @@ h2:last-of-type + ul li:hover {
     z-index: 9999;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     animation: pulse-once 2s ease-in-out;
+    /* Mobile/touch support */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 @keyframes pulse-once {
@@ -722,6 +727,12 @@ h2:last-of-type + ul li:hover {
     border-color: var(--secondary-color);
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Active state for touch feedback */
+.theme-toggle:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .theme-toggle svg {
@@ -770,6 +781,24 @@ h2:last-of-type + ul li:hover {
 
 /* Responsive toggle positioning */
 @media (max-width: 768px) {
+    .theme-toggle {
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 44px;
+        height: 44px;
+        /* Mobile touch improvements */
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+
+    .theme-toggle svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 380px) {
     .theme-toggle {
         top: 0.5rem;
         right: 0.5rem;
