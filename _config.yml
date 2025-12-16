@@ -1,0 +1,28 @@
+# Site settings
+title: Virinderpal Singh Batth
+description: Lead Data Engineer - Portfolio and CV
+author: Virinderpal Singh Batth
+email: vbatth5627@gmail.com
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Permalink structure
+permalink: pretty
+
+# Enable GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

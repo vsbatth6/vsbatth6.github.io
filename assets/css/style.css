@@ -1,0 +1,655 @@
+/* ===========================
+   CSS Reset & Base Styles
+   =========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   COLOR SCHEMES
+
+   Uncomment one of the color schemes below to change the appearance.
+   Comment out the current "Default" scheme and uncomment your preferred scheme.
+   =========================== */
+
+/* DEFAULT - Professional Blue
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #ddd;
+    --bg-color: #ffffff;
+    --section-bg: #f8f9fa;
+    --link-color: #3498db;
+    --link-hover: #2980b9;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+} */
+
+/* FOREST GREEN - Recommended for Data/Tech roles */
+:root {
+    --primary-color: #1a4d2e;
+    --secondary-color: #27ae60;
+    --accent-color: #229954;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #d5e8d4;
+    --bg-color: #ffffff;
+    --section-bg: #f1f8f4;
+    --link-color: #27ae60;
+    --link-hover: #1e8449;
+    --shadow: 0 2px 8px rgba(26, 77, 46, 0.08);
+}
+
+
+/* ELEGANT PURPLE - Modern & Creative
+:root {
+    --primary-color: #4a148c;
+    --secondary-color: #7b1fa2;
+    --accent-color: #9c27b0;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #e1d5e7;
+    --bg-color: #ffffff;
+    --section-bg: #f3e5f5;
+    --link-color: #7b1fa2;
+    --link-hover: #6a1b9a;
+    --shadow: 0 2px 8px rgba(74, 20, 140, 0.08);
+}
+*/
+
+/* MIDNIGHT BLUE - Executive & Professional
+:root {
+    --primary-color: #0d1b2a;
+    --secondary-color: #1b4965;
+    --accent-color: #62b6cb;
+    --text-color: #2d3748;
+    --text-light: #666;
+    --border-color: #cfe2f3;
+    --bg-color: #ffffff;
+    --section-bg: #f0f4f8;
+    --link-color: #1b4965;
+    --link-hover: #0d1b2a;
+    --shadow: 0 2px 8px rgba(13, 27, 42, 0.1);
+}
+*/
+
+/* WARM CHARCOAL - Minimalist & Modern
+:root {
+    --primary-color: #2d2d2d;
+    --secondary-color: #4a4a4a;
+    --accent-color: #ff6b6b;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #e0e0e0;
+    --bg-color: #ffffff;
+    --section-bg: #f5f5f5;
+    --link-color: #4a4a4a;
+    --link-hover: #2d2d2d;
+    --shadow: 0 2px 8px rgba(45, 45, 45, 0.08);
+}
+*/
+
+/* ===========================
+   Typography
+   =========================== */
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+h3 {
+    font-size: 1.35rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* ===========================
+   Layout
+   =========================== */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.content {
+    background: var(--bg-color);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* ===========================
+   Header Styles
+   =========================== */
+
+.content > h1:first-child {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.content > p:first-of-type {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+}
+
+.content > p:nth-of-type(2) {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-item {
+    white-space: nowrap;
+}
+
+.contact-separator {
+    color: var(--border-color);
+    font-weight: 300;
+}
+
+.linkedin-link,
+.website-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: opacity 0.2s ease;
+}
+
+.linkedin-link:hover,
+.website-link:hover {
+    opacity: 0.8;
+}
+
+.linkedin-icon,
+.website-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ===========================
+   Links
+   =========================== */
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* ===========================
+   Horizontal Rules
+   =========================== */
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0;
+}
+
+/* ===========================
+   Lists & Content
+   =========================== */
+
+ul {
+    margin-left: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+
+li strong {
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Ensure body paragraphs (after section headers) are left-aligned */
+h2 + p {
+    text-align: left !important;
+}
+
+strong {
+    font-weight: 600;
+}
+
+/* ===========================
+   Experience Section
+   =========================== */
+
+.job-header {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    background-color: var(--section-bg);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1.5px solid transparent;
+    box-shadow: 0 3px 10px rgba(39, 174, 96, 0.35);
+}
+
+.job-header strong {
+    font-size: 1.05rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Fallback for any h3 + p not using job-header class */
+h3 + p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+/* ===========================
+   Tables (Technical Skills)
+   =========================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:hover {
+    background-color: var(--section-bg);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* ===========================
+   Key Achievements Section
+   =========================== */
+
+h2:last-of-type + ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+h2:last-of-type + ul li {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    background-color: var(--section-bg);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+h2:last-of-type + ul li:hover {
+    background-color: #e8f4f8;
+    border-left-color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+.print-instruction {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 0.75rem;
+    }
+
+    /* Reduce LinkedIn and website icon size on tablets/mobile */
+    .linkedin-icon,
+    .website-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+    }
+
+    /* Keep contact info on one line on mobile */
+    .contact-info {
+        font-size: 1.1rem;
+        gap: 0.4rem;
+    }
+
+    /* Further reduce LinkedIn and website icons on small phones */
+    .linkedin-icon,
+    .website-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* ===========================
+   Print Styles
+   =========================== */
+
+@media print {
+    body {
+        font-size: 11pt;
+        color: #000;
+        background: white;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .content {
+        box-shadow: none;
+        padding: 0;
+        position: relative;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    /* Header layout for print: name/role on left, links on right */
+    .content > h1:first-child {
+        text-align: left !important;
+        font-size: 24pt;
+        color: #000 !important;
+        margin-bottom: 0.25rem;
+    }
+
+    .content > p:first-of-type {
+        text-align: left !important;
+        font-size: 14pt;
+        color: #000 !important;
+        margin-bottom: 1rem;
+    }
+
+    /* Position contact info on the right side */
+    .contact-info {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right !important;
+        align-items: flex-end !important;
+        font-size: 10pt;
+        margin-bottom: 0;
+        gap: 0.25rem;
+    }
+
+    /* Show full URLs in print */
+    .linkedin-link::after {
+        content: " linkedin.com/in/vbatth";
+        margin-left: 0.25rem;
+    }
+
+    .website-link::after {
+        content: " vsbatth.com";
+        margin-left: 0.25rem;
+    }
+
+    /* Hide link text, show only icon + URL */
+    .linkedin-link,
+    .website-link {
+        color: #000;
+        font-size: 0;
+    }
+
+    .linkedin-link::after,
+    .website-link::after {
+        font-size: 10pt;
+    }
+
+    h2 {
+        font-size: 16pt;
+        page-break-after: avoid;
+        color: #000;
+        border-bottom: 2px solid #000;
+        margin-top: 1.5rem;
+    }
+
+    h3 {
+        font-size: 13pt;
+        page-break-after: avoid;
+        color: #000;
+    }
+
+    ul, p {
+        page-break-inside: avoid;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    table {
+        box-shadow: none;
+    }
+
+    /* Override company name boxes to black and white */
+    .job-header {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        color: #000;
+        padding: 0;
+    }
+
+    .job-header strong {
+        color: #000;
+    }
+
+    /* Override table colors for print */
+    thead {
+        background-color: #000;
+        color: white;
+    }
+
+    td strong {
+        color: #000;
+    }
+
+    /* Override Key Achievements borders to black */
+    h2:last-of-type + ul li {
+        background-color: #f5f5f5;
+        border-left: 4px solid #000;
+    }
+
+    /* Override Key Achievements bold text to black */
+    h2:last-of-type + ul li strong {
+        color: #000 !important;
+    }
+
+    /* LinkedIn icon in print */
+    .linkedin-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .linkedin-link {
+        color: #000;
+    }
+
+    /* Override any remaining colored elements */
+    strong {
+        color: #000;
+    }
+}
+
+/* ===========================
+   Accessibility
+   =========================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
