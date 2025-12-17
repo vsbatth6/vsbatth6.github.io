@@ -593,7 +593,7 @@ h2:last-of-type + ul li {
     /* Header layout for print: name/role on left, links on right */
     .content > h1:first-child {
         text-align: left !important;
-        font-size: 24pt;
+        font-size: 20pt;
         color: #000 !important;
         margin-bottom: 0.25rem;
     }
@@ -648,7 +648,7 @@ h2:last-of-type + ul li {
     }
 
     h2 {
-        font-size: 16pt;
+        font-size: 14pt;
         page-break-after: avoid;
         color: #000;
         border-bottom: 2px solid #000;
@@ -656,7 +656,7 @@ h2:last-of-type + ul li {
     }
 
     h3 {
-        font-size: 13pt;
+        font-size: 12pt;
         page-break-after: avoid;
         color: #000;
     }
