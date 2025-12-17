@@ -34,7 +34,7 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 
 ## Experience
 
-### Lead Data Engineer
+### Lead Data Engineer | Insurance
 
 <p class="job-header"><span><strong>evolv Consulting</strong></span><span>Oct 2025 – Present</span></p>
 
@@ -42,7 +42,7 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 - Navigating complex ambiguities across legacy data platforms from multiple sub-companies to identify data overlaps and establish master data definitions
 - Architecting high-performance data pipelines serving a transactional Kong API layer for real-time business insights
 
-### Data Engineer
+### Data Engineer | Financial Credit Risk
 
 <p class="job-header"><span><strong>USAA</strong></span><span>Apr 2021 – Oct 2025</span></p>
 
@@ -55,7 +55,7 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 - Architected cross-organizational data lake POC with AWS S3, reducing transfer time by 50%
 - Enhanced PII/PCI/PHI pipeline security with data masking, tokenization, and RBAC
 
-### Software Engineer – ETL & Big Data Consultant
+### Software Engineer | ETL & Big Data Consultant
 
 <p class="job-header"><span><strong>HCL America Inc.</strong></span><span>Client: USAA | Nov 2017 – Apr 2021</span></p>
 
