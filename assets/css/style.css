@@ -639,35 +639,35 @@ h2:last-of-type + ul li:hover {
    Dark Mode - Forest Green Dark Theme
    =========================== */
 
-/* Dark mode variables */
+/* Dark mode variables - muted, easy on the eyes */
 :root[data-theme="dark"] {
-    --primary-color: #4ade80;
-    --secondary-color: #22c55e;
-    --accent-color: #16a34a;
-    --text-color: #e2e8f0;
-    --text-light: #94a3b8;
-    --border-color: #334155;
-    --bg-color: #0f172a;
-    --section-bg: #1e293b;
-    --link-color: #4ade80;
-    --link-hover: #86efac;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --primary-color: #7cb587;
+    --secondary-color: #5a9a6e;
+    --accent-color: #4a8a5e;
+    --text-color: #cbd5e1;
+    --text-light: #8b95a5;
+    --border-color: #2d3a4a;
+    --bg-color: #121a24;
+    --section-bg: #1a242f;
+    --link-color: #7cb587;
+    --link-hover: #9ac9a3;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* Auto dark mode - respects system preference */
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        --primary-color: #4ade80;
-        --secondary-color: #22c55e;
-        --accent-color: #16a34a;
-        --text-color: #e2e8f0;
-        --text-light: #94a3b8;
-        --border-color: #334155;
-        --bg-color: #0f172a;
-        --section-bg: #1e293b;
-        --link-color: #4ade80;
-        --link-hover: #86efac;
-        --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        --primary-color: #7cb587;
+        --secondary-color: #5a9a6e;
+        --accent-color: #4a8a5e;
+        --text-color: #cbd5e1;
+        --text-light: #8b95a5;
+        --border-color: #2d3a4a;
+        --bg-color: #121a24;
+        --section-bg: #1a242f;
+        --link-color: #7cb587;
+        --link-hover: #9ac9a3;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     }
 }
 
@@ -681,12 +681,12 @@ h2:last-of-type + ul li:hover {
 
 /* Table header in dark mode */
 :root[data-theme="dark"] thead {
-    background-color: #1e3a2f;
+    background-color: #1e2f28;
 }
 
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) thead {
-        background-color: #1e3a2f;
+        background-color: #1e2f28;
     }
 }
 
@@ -772,26 +772,79 @@ h2:last-of-type + ul li:hover {
     }
 }
 
-/* Hide toggle button in print */
+/* PDF Download button */
+.pdf-download {
+    position: fixed;
+    top: 4.5rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Mobile/touch support */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.pdf-download:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-download:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pdf-download svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Hide buttons in print */
 @media print {
-    .theme-toggle {
+    .theme-toggle,
+    .pdf-download {
         display: none !important;
     }
 }
 
-/* Responsive toggle positioning */
+/* Responsive button positioning */
 @media (max-width: 768px) {
     .theme-toggle {
         top: 0.75rem;
         right: 0.75rem;
         width: 44px;
         height: 44px;
-        /* Mobile touch improvements */
-        -webkit-tap-highlight-color: transparent;
-        touch-action: manipulation;
     }
 
     .theme-toggle svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .pdf-download {
+        top: 3.75rem;
+        right: 0.75rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    .pdf-download svg {
         width: 20px;
         height: 20px;
     }
@@ -807,6 +860,18 @@ h2:last-of-type + ul li:hover {
     }
 
     .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .pdf-download {
+        top: 3.25rem;
+        right: 0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .pdf-download svg {
         width: 18px;
         height: 18px;
     }
