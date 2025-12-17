@@ -11,26 +11,15 @@
 /* ===========================
    COLOR SCHEMES
 
-   Uncomment one of the color schemes below to change the appearance.
-   Comment out the current "Default" scheme and uncomment your preferred scheme.
+   Each theme includes both LIGHT and DARK modes grouped together.
+   To switch themes: comment out the active theme and uncomment your preferred one.
    =========================== */
 
-/* DEFAULT - Professional Blue
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --text-color: #333;
-    --text-light: #666;
-    --border-color: #ddd;
-    --bg-color: #ffffff;
-    --section-bg: #f8f9fa;
-    --link-color: #3498db;
-    --link-hover: #2980b9;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-} */
+/* ----------------------------------------
+   FOREST GREEN - Currently Active
+   ---------------------------------------- */
 
-/* FOREST GREEN - Recommended for Data/Tech roles */
+/* Light Mode */
 :root {
     --primary-color: #1a4d2e;
     --secondary-color: #27ae60;
@@ -45,8 +34,109 @@
     --shadow: 0 2px 8px rgba(26, 77, 46, 0.08);
 }
 
+/* Dark Mode - Manual toggle */
+:root[data-theme="dark"] {
+    --primary-color: #7cb587;
+    --secondary-color: #5a9a6e;
+    --accent-color: #4a8a5e;
+    --text-color: #cbd5e1;
+    --text-light: #8b95a5;
+    --border-color: #2d3a4a;
+    --bg-color: #121a24;
+    --section-bg: #1a242f;
+    --link-color: #7cb587;
+    --link-hover: #9ac9a3;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
 
-/* ELEGANT PURPLE - Modern & Creative
+/* Dark Mode - Auto (system preference) */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #7cb587;
+        --secondary-color: #5a9a6e;
+        --accent-color: #4a8a5e;
+        --text-color: #cbd5e1;
+        --text-light: #8b95a5;
+        --border-color: #2d3a4a;
+        --bg-color: #121a24;
+        --section-bg: #1a242f;
+        --link-color: #7cb587;
+        --link-hover: #9ac9a3;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* ----------------------------------------
+   WARM CHARCOAL - Minimalist & Modern
+   ----------------------------------------
+
+:root {
+    --primary-color: #2d2d2d;
+    --secondary-color: #4a4a4a;
+    --accent-color: #ff6b6b;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #e0e0e0;
+    --bg-color: #ffffff;
+    --section-bg: #f5f5f5;
+    --link-color: #4a4a4a;
+    --link-hover: #2d2d2d;
+    --shadow: 0 2px 8px rgba(45, 45, 45, 0.08);
+}
+
+:root[data-theme="dark"] {
+    --primary-color: #a0a0a0;
+    --secondary-color: #808080;
+    --accent-color: #ff8a8a;
+    --text-color: #e0e0e0;
+    --text-light: #999999;
+    --border-color: #3a3a3a;
+    --bg-color: #1a1a1a;
+    --section-bg: #252525;
+    --link-color: #b0b0b0;
+    --link-hover: #ff8a8a;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #a0a0a0;
+        --secondary-color: #808080;
+        --accent-color: #ff8a8a;
+        --text-color: #e0e0e0;
+        --text-light: #999999;
+        --border-color: #3a3a3a;
+        --bg-color: #1a1a1a;
+        --section-bg: #252525;
+        --link-color: #b0b0b0;
+        --link-hover: #ff8a8a;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+}
+
+*/
+
+/* ----------------------------------------
+   OTHER THEMES (Light mode only, no dark mode defined)
+   ---------------------------------------- */
+
+/* PROFESSIONAL BLUE
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #ddd;
+    --bg-color: #ffffff;
+    --section-bg: #f8f9fa;
+    --link-color: #3498db;
+    --link-hover: #2980b9;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+*/
+
+/* ELEGANT PURPLE
 :root {
     --primary-color: #4a148c;
     --secondary-color: #7b1fa2;
@@ -62,7 +152,7 @@
 }
 */
 
-/* MIDNIGHT BLUE - Executive & Professional
+/* MIDNIGHT BLUE
 :root {
     --primary-color: #0d1b2a;
     --secondary-color: #1b4965;
@@ -75,22 +165,6 @@
     --link-color: #1b4965;
     --link-hover: #0d1b2a;
     --shadow: 0 2px 8px rgba(13, 27, 42, 0.1);
-}
-*/
-
-/* WARM CHARCOAL - Minimalist & Modern
-:root {
-    --primary-color: #2d2d2d;
-    --secondary-color: #4a4a4a;
-    --accent-color: #ff6b6b;
-    --text-color: #333;
-    --text-light: #666;
-    --border-color: #e0e0e0;
-    --bg-color: #ffffff;
-    --section-bg: #f5f5f5;
-    --link-color: #4a4a4a;
-    --link-hover: #2d2d2d;
-    --shadow: 0 2px 8px rgba(45, 45, 45, 0.08);
 }
 */
 
@@ -202,6 +276,7 @@ h3 {
 }
 
 .linkedin-link,
+.github-link,
 .website-link {
     display: inline-flex;
     align-items: center;
@@ -210,11 +285,13 @@ h3 {
 }
 
 .linkedin-link:hover,
+.github-link:hover,
 .website-link:hover {
     opacity: 0.8;
 }
 
 .linkedin-icon,
+.github-icon,
 .website-icon {
     width: 24px;
     height: 24px;
@@ -377,10 +454,13 @@ h2:last-of-type + ul li {
     transition: all 0.2s ease;
 }
 
-h2:last-of-type + ul li:hover {
-    background-color: #e8f4f8;
-    border-left-color: var(--accent-color);
-    transform: translateX(5px);
+/* Hover effect only for devices that support hover (desktop) */
+@media (hover: hover) and (pointer: fine) {
+    h2:last-of-type + ul li:hover {
+        background-color: var(--border-color);
+        border-left-color: var(--primary-color);
+        transform: translateX(5px);
+    }
 }
 
 /* ===========================
@@ -439,8 +519,9 @@ h2:last-of-type + ul li:hover {
         padding: 0.75rem;
     }
 
-    /* Reduce LinkedIn and website icon size on tablets/mobile */
+    /* Reduce icon size on tablets/mobile */
     .linkedin-icon,
+    .github-icon,
     .website-icon {
         width: 20px;
         height: 20px;
@@ -474,8 +555,9 @@ h2:last-of-type + ul li:hover {
         gap: 0.4rem;
     }
 
-    /* Further reduce LinkedIn and website icons on small phones */
+    /* Further reduce icons on small phones */
     .linkedin-icon,
+    .github-icon,
     .website-icon {
         width: 18px;
         height: 18px;
@@ -541,6 +623,11 @@ h2:last-of-type + ul li:hover {
         margin-left: 0.25rem;
     }
 
+    .github-link::after {
+        content: " github.com/vsbatth6";
+        margin-left: 0.25rem;
+    }
+
     .website-link::after {
         content: " vsbatth.com";
         margin-left: 0.25rem;
@@ -548,12 +635,14 @@ h2:last-of-type + ul li:hover {
 
     /* Hide link text, show only icon + URL */
     .linkedin-link,
+    .github-link,
     .website-link {
         color: #000;
         font-size: 0;
     }
 
     .linkedin-link::after,
+    .github-link::after,
     .website-link::after {
         font-size: 10pt;
     }
@@ -632,6 +721,215 @@ h2:last-of-type + ul li:hover {
     /* Override any remaining colored elements */
     strong {
         color: #000;
+    }
+}
+
+/* ===========================
+   Dark Mode Specific Overrides
+   =========================== */
+:root[data-theme="dark"] .content,
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .content {
+        border: 1px solid var(--border-color);
+    }
+}
+
+/* Table header in dark mode */
+:root[data-theme="dark"] thead {
+    background-color: #1e2f28;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) thead {
+        background-color: #1e2f28;
+    }
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: pulse-once 2s ease-in-out;
+    /* Mobile/touch support */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+@keyframes pulse-once {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.theme-toggle:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Active state for touch feedback */
+.theme-toggle:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(15deg);
+}
+
+/* Sun icon (shown in dark mode) */
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+/* Moon icon (shown in light mode) */
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle .sun-icon {
+    display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle .moon-icon {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .sun-icon {
+        display: block;
+    }
+    :root:not([data-theme="light"]) .theme-toggle .moon-icon {
+        display: none;
+    }
+}
+
+/* PDF Download button */
+.pdf-download {
+    position: fixed;
+    top: 5.5rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Mobile/touch support */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+}
+
+.pdf-download:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-download:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pdf-download svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Hide buttons in print */
+@media print {
+    .theme-toggle,
+    .pdf-download {
+        display: none !important;
+    }
+}
+
+/* Responsive button positioning */
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    .theme-toggle svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .pdf-download {
+        top: 4.25rem;
+        right: 0.75rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    .pdf-download svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 380px) {
+    .theme-toggle {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .pdf-download {
+        top: 3.75rem;
+        right: 0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .pdf-download svg {
+        width: 18px;
+        height: 18px;
     }
 }
 
