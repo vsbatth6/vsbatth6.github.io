@@ -11,6 +11,14 @@
     <meta property="og:title" content="{{ page.title | default: site.title }}">
     <meta property="og:description" content="{{ site.description }}">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ '/assets/og-image.svg' | absolute_url }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="{{ '/assets/og-image.svg' | absolute_url }}">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
