@@ -686,6 +686,43 @@ h2:last-of-type + ul li {
     }
 }
 
+/* ===========================
+   WARM CHARCOAL DARK MODE - For future reference
+   Uncomment this section if using Warm Charcoal light theme
+   ===========================
+
+:root[data-theme="dark"] {
+    --primary-color: #a0a0a0;
+    --secondary-color: #808080;
+    --accent-color: #ff8a8a;
+    --text-color: #e0e0e0;
+    --text-light: #999999;
+    --border-color: #3a3a3a;
+    --bg-color: #1a1a1a;
+    --section-bg: #252525;
+    --link-color: #b0b0b0;
+    --link-hover: #ff8a8a;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #a0a0a0;
+        --secondary-color: #808080;
+        --accent-color: #ff8a8a;
+        --text-color: #e0e0e0;
+        --text-light: #999999;
+        --border-color: #3a3a3a;
+        --bg-color: #1a1a1a;
+        --section-bg: #252525;
+        --link-color: #b0b0b0;
+        --link-hover: #ff8a8a;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+}
+
+*/
+
 /* Dark mode specific overrides */
 :root[data-theme="dark"] .content,
 @media (prefers-color-scheme: dark) {
