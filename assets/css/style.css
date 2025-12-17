@@ -11,26 +11,15 @@
 /* ===========================
    COLOR SCHEMES
 
-   Uncomment one of the color schemes below to change the appearance.
-   Comment out the current "Default" scheme and uncomment your preferred scheme.
+   Each theme includes both LIGHT and DARK modes grouped together.
+   To switch themes: comment out the active theme and uncomment your preferred one.
    =========================== */
 
-/* DEFAULT - Professional Blue
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --text-color: #333;
-    --text-light: #666;
-    --border-color: #ddd;
-    --bg-color: #ffffff;
-    --section-bg: #f8f9fa;
-    --link-color: #3498db;
-    --link-hover: #2980b9;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-} */
+/* ----------------------------------------
+   FOREST GREEN - Currently Active
+   ---------------------------------------- */
 
-/* FOREST GREEN - Recommended for Data/Tech roles */
+/* Light Mode */
 :root {
     --primary-color: #1a4d2e;
     --secondary-color: #27ae60;
@@ -45,8 +34,109 @@
     --shadow: 0 2px 8px rgba(26, 77, 46, 0.08);
 }
 
+/* Dark Mode - Manual toggle */
+:root[data-theme="dark"] {
+    --primary-color: #7cb587;
+    --secondary-color: #5a9a6e;
+    --accent-color: #4a8a5e;
+    --text-color: #cbd5e1;
+    --text-light: #8b95a5;
+    --border-color: #2d3a4a;
+    --bg-color: #121a24;
+    --section-bg: #1a242f;
+    --link-color: #7cb587;
+    --link-hover: #9ac9a3;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
 
-/* ELEGANT PURPLE - Modern & Creative
+/* Dark Mode - Auto (system preference) */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #7cb587;
+        --secondary-color: #5a9a6e;
+        --accent-color: #4a8a5e;
+        --text-color: #cbd5e1;
+        --text-light: #8b95a5;
+        --border-color: #2d3a4a;
+        --bg-color: #121a24;
+        --section-bg: #1a242f;
+        --link-color: #7cb587;
+        --link-hover: #9ac9a3;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* ----------------------------------------
+   WARM CHARCOAL - Minimalist & Modern
+   ----------------------------------------
+
+:root {
+    --primary-color: #2d2d2d;
+    --secondary-color: #4a4a4a;
+    --accent-color: #ff6b6b;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #e0e0e0;
+    --bg-color: #ffffff;
+    --section-bg: #f5f5f5;
+    --link-color: #4a4a4a;
+    --link-hover: #2d2d2d;
+    --shadow: 0 2px 8px rgba(45, 45, 45, 0.08);
+}
+
+:root[data-theme="dark"] {
+    --primary-color: #a0a0a0;
+    --secondary-color: #808080;
+    --accent-color: #ff8a8a;
+    --text-color: #e0e0e0;
+    --text-light: #999999;
+    --border-color: #3a3a3a;
+    --bg-color: #1a1a1a;
+    --section-bg: #252525;
+    --link-color: #b0b0b0;
+    --link-hover: #ff8a8a;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #a0a0a0;
+        --secondary-color: #808080;
+        --accent-color: #ff8a8a;
+        --text-color: #e0e0e0;
+        --text-light: #999999;
+        --border-color: #3a3a3a;
+        --bg-color: #1a1a1a;
+        --section-bg: #252525;
+        --link-color: #b0b0b0;
+        --link-hover: #ff8a8a;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+}
+
+*/
+
+/* ----------------------------------------
+   OTHER THEMES (Light mode only, no dark mode defined)
+   ---------------------------------------- */
+
+/* PROFESSIONAL BLUE
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #ddd;
+    --bg-color: #ffffff;
+    --section-bg: #f8f9fa;
+    --link-color: #3498db;
+    --link-hover: #2980b9;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+*/
+
+/* ELEGANT PURPLE
 :root {
     --primary-color: #4a148c;
     --secondary-color: #7b1fa2;
@@ -62,7 +152,7 @@
 }
 */
 
-/* MIDNIGHT BLUE - Executive & Professional
+/* MIDNIGHT BLUE
 :root {
     --primary-color: #0d1b2a;
     --secondary-color: #1b4965;
@@ -75,22 +165,6 @@
     --link-color: #1b4965;
     --link-hover: #0d1b2a;
     --shadow: 0 2px 8px rgba(13, 27, 42, 0.1);
-}
-*/
-
-/* WARM CHARCOAL - Minimalist & Modern
-:root {
-    --primary-color: #2d2d2d;
-    --secondary-color: #4a4a4a;
-    --accent-color: #ff6b6b;
-    --text-color: #333;
-    --text-light: #666;
-    --border-color: #e0e0e0;
-    --bg-color: #ffffff;
-    --section-bg: #f5f5f5;
-    --link-color: #4a4a4a;
-    --link-hover: #2d2d2d;
-    --shadow: 0 2px 8px rgba(45, 45, 45, 0.08);
 }
 */
 
@@ -651,79 +725,8 @@ h2:last-of-type + ul li {
 }
 
 /* ===========================
-   Dark Mode - Forest Green Dark Theme
+   Dark Mode Specific Overrides
    =========================== */
-
-/* Dark mode variables - muted, easy on the eyes */
-:root[data-theme="dark"] {
-    --primary-color: #7cb587;
-    --secondary-color: #5a9a6e;
-    --accent-color: #4a8a5e;
-    --text-color: #cbd5e1;
-    --text-light: #8b95a5;
-    --border-color: #2d3a4a;
-    --bg-color: #121a24;
-    --section-bg: #1a242f;
-    --link-color: #7cb587;
-    --link-hover: #9ac9a3;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-}
-
-/* Auto dark mode - respects system preference */
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        --primary-color: #7cb587;
-        --secondary-color: #5a9a6e;
-        --accent-color: #4a8a5e;
-        --text-color: #cbd5e1;
-        --text-light: #8b95a5;
-        --border-color: #2d3a4a;
-        --bg-color: #121a24;
-        --section-bg: #1a242f;
-        --link-color: #7cb587;
-        --link-hover: #9ac9a3;
-        --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    }
-}
-
-/* ===========================
-   WARM CHARCOAL DARK MODE - For future reference
-   Uncomment this section if using Warm Charcoal light theme
-   ===========================
-
-:root[data-theme="dark"] {
-    --primary-color: #a0a0a0;
-    --secondary-color: #808080;
-    --accent-color: #ff8a8a;
-    --text-color: #e0e0e0;
-    --text-light: #999999;
-    --border-color: #3a3a3a;
-    --bg-color: #1a1a1a;
-    --section-bg: #252525;
-    --link-color: #b0b0b0;
-    --link-hover: #ff8a8a;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        --primary-color: #a0a0a0;
-        --secondary-color: #808080;
-        --accent-color: #ff8a8a;
-        --text-color: #e0e0e0;
-        --text-light: #999999;
-        --border-color: #3a3a3a;
-        --bg-color: #1a1a1a;
-        --section-bg: #252525;
-        --link-color: #b0b0b0;
-        --link-hover: #ff8a8a;
-        --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    }
-}
-
-*/
-
-/* Dark mode specific overrides */
 :root[data-theme="dark"] .content,
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) .content {
