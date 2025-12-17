@@ -202,6 +202,7 @@ h3 {
 }
 
 .linkedin-link,
+.github-link,
 .website-link {
     display: inline-flex;
     align-items: center;
@@ -210,11 +211,13 @@ h3 {
 }
 
 .linkedin-link:hover,
+.github-link:hover,
 .website-link:hover {
     opacity: 0.8;
 }
 
 .linkedin-icon,
+.github-icon,
 .website-icon {
     width: 24px;
     height: 24px;
@@ -439,8 +442,9 @@ h2:last-of-type + ul li:hover {
         padding: 0.75rem;
     }
 
-    /* Reduce LinkedIn and website icon size on tablets/mobile */
+    /* Reduce icon size on tablets/mobile */
     .linkedin-icon,
+    .github-icon,
     .website-icon {
         width: 20px;
         height: 20px;
@@ -474,8 +478,9 @@ h2:last-of-type + ul li:hover {
         gap: 0.4rem;
     }
 
-    /* Further reduce LinkedIn and website icons on small phones */
+    /* Further reduce icons on small phones */
     .linkedin-icon,
+    .github-icon,
     .website-icon {
         width: 18px;
         height: 18px;
@@ -541,6 +546,11 @@ h2:last-of-type + ul li:hover {
         margin-left: 0.25rem;
     }
 
+    .github-link::after {
+        content: " github.com/vsbatth6";
+        margin-left: 0.25rem;
+    }
+
     .website-link::after {
         content: " vsbatth.com";
         margin-left: 0.25rem;
@@ -548,12 +558,14 @@ h2:last-of-type + ul li:hover {
 
     /* Hide link text, show only icon + URL */
     .linkedin-link,
+    .github-link,
     .website-link {
         color: #000;
         font-size: 0;
     }
 
     .linkedin-link::after,
+    .github-link::after,
     .website-link::after {
         font-size: 10pt;
     }
