@@ -790,7 +790,7 @@ h2:last-of-type + ul li {
 /* PDF Download button */
 .pdf-download {
     position: fixed;
-    top: 4.5rem;
+    top: 5.5rem;
     right: 1.5rem;
     width: 48px;
     height: 48px;
@@ -810,6 +810,7 @@ h2:last-of-type + ul li {
     touch-action: manipulation;
     user-select: none;
     -webkit-user-select: none;
+    text-decoration: none;
 }
 
 .pdf-download:hover {
@@ -853,7 +854,7 @@ h2:last-of-type + ul li {
     }
 
     .pdf-download {
-        top: 3.75rem;
+        top: 4.25rem;
         right: 0.75rem;
         width: 44px;
         height: 44px;
@@ -880,7 +881,7 @@ h2:last-of-type + ul li {
     }
 
     .pdf-download {
-        top: 3.25rem;
+        top: 3.75rem;
         right: 0.5rem;
         width: 40px;
         height: 40px;
