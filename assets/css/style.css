@@ -30,7 +30,7 @@
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 } */
 
-/* FOREST GREEN - Recommended for Data/Tech roles
+/* FOREST GREEN - Recommended for Data/Tech roles */
 :root {
     --primary-color: #1a4d2e;
     --secondary-color: #27ae60;
@@ -44,7 +44,6 @@
     --link-hover: #1e8449;
     --shadow: 0 2px 8px rgba(26, 77, 46, 0.08);
 }
-*/
 
 
 /* ELEGANT PURPLE - Modern & Creative
@@ -79,7 +78,7 @@
 }
 */
 
-/* WARM CHARCOAL - Minimalist & Modern */
+/* WARM CHARCOAL - Minimalist & Modern
 :root {
     --primary-color: #2d2d2d;
     --secondary-color: #4a4a4a;
@@ -93,6 +92,7 @@
     --link-hover: #2d2d2d;
     --shadow: 0 2px 8px rgba(45, 45, 45, 0.08);
 }
+*/
 
 /* ===========================
    Typography
@@ -651,38 +651,38 @@ h2:last-of-type + ul li {
 }
 
 /* ===========================
-   Dark Mode - Warm Charcoal Dark Theme
+   Dark Mode - Forest Green Dark Theme
    =========================== */
 
-/* Dark mode variables - muted charcoal with coral accent */
+/* Dark mode variables - muted, easy on the eyes */
 :root[data-theme="dark"] {
-    --primary-color: #a0a0a0;
-    --secondary-color: #808080;
-    --accent-color: #ff8a8a;
-    --text-color: #e0e0e0;
-    --text-light: #999999;
-    --border-color: #3a3a3a;
-    --bg-color: #1a1a1a;
-    --section-bg: #252525;
-    --link-color: #b0b0b0;
-    --link-hover: #ff8a8a;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    --primary-color: #7cb587;
+    --secondary-color: #5a9a6e;
+    --accent-color: #4a8a5e;
+    --text-color: #cbd5e1;
+    --text-light: #8b95a5;
+    --border-color: #2d3a4a;
+    --bg-color: #121a24;
+    --section-bg: #1a242f;
+    --link-color: #7cb587;
+    --link-hover: #9ac9a3;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* Auto dark mode - respects system preference */
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        --primary-color: #a0a0a0;
-        --secondary-color: #808080;
-        --accent-color: #ff8a8a;
-        --text-color: #e0e0e0;
-        --text-light: #999999;
-        --border-color: #3a3a3a;
-        --bg-color: #1a1a1a;
-        --section-bg: #252525;
-        --link-color: #b0b0b0;
-        --link-hover: #ff8a8a;
-        --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        --primary-color: #7cb587;
+        --secondary-color: #5a9a6e;
+        --accent-color: #4a8a5e;
+        --text-color: #cbd5e1;
+        --text-light: #8b95a5;
+        --border-color: #2d3a4a;
+        --bg-color: #121a24;
+        --section-bg: #1a242f;
+        --link-color: #7cb587;
+        --link-hover: #9ac9a3;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     }
 }
 
@@ -696,12 +696,12 @@ h2:last-of-type + ul li {
 
 /* Table header in dark mode */
 :root[data-theme="dark"] thead {
-    background-color: #333333;
+    background-color: #1e2f28;
 }
 
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) thead {
-        background-color: #333333;
+        background-color: #1e2f28;
     }
 }
 
