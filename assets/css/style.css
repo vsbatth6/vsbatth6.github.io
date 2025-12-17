@@ -380,10 +380,13 @@ h2:last-of-type + ul li {
     transition: all 0.2s ease;
 }
 
-h2:last-of-type + ul li:hover {
-    background-color: #e8f4f8;
-    border-left-color: var(--accent-color);
-    transform: translateX(5px);
+/* Hover effect only for devices that support hover (desktop) */
+@media (hover: hover) and (pointer: fine) {
+    h2:last-of-type + ul li:hover {
+        background-color: var(--border-color);
+        border-left-color: var(--primary-color);
+        transform: translateX(5px);
+    }
 }
 
 /* ===========================
