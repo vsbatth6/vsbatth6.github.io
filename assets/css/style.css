@@ -590,6 +590,11 @@ h2:last-of-type + ul li {
         display: none;
     }
 
+    /* Hide sections for resume print (HCL section, Key Achievements) */
+    .hide-for-resume {
+        display: none !important;
+    }
+
     /* Header layout for print: name/role on left, links on right */
     .content > h1:first-child {
         text-align: left !important;

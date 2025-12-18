@@ -56,8 +56,11 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 - Enhanced PII/PCI/PHI pipeline security with data masking, tokenization, and RBAC
 
 ### Software Engineer | ETL & Big Data Consultant
+{: .hide-for-resume}
 
-<p class="job-header"><span><strong>HCL America Inc.</strong></span><span>Client: USAA | Nov 2017 – Apr 2021</span></p>
+<p class="job-header hide-for-resume"><span><strong>HCL America Inc.</strong></span><span>Client: USAA | Nov 2017 – Apr 2021</span></p>
+
+<div class="hide-for-resume" markdown="1">
 
 - Pioneered the first project at USAA to utilize AWS cloud and real-time streaming (NiFi/Kafka), transforming batch to real-time processing
 - Established AWS S3 to HDFS file transfer routes, enabling cloud-to-on-premise data integration
@@ -66,6 +69,8 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 - Created automated schema check process eliminating hours of manual inspection
 - Supervised Hadoop projects and mentored colleagues on CI/CD best practices
 - Ensured PII/non-PII compliance with Information Governance standards
+
+</div>
 
 ## Technical Skills
 
@@ -84,6 +89,8 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 Concentration: Big Data & Analytics
 New York Institute of Technology | *Cum Laude*
 
+<div class="hide-for-resume" markdown="1">
+
 ## Key Achievements
 
 - 🚀 **First-Mover Innovation** – Delivered USAA's first AWS cloud and real-time streaming project
@@ -92,3 +99,5 @@ New York Institute of Technology | *Cum Laude*
 - 📈 **30% Engagement Lift** – Led data initiative driving measurable business outcomes
 - 🔄 **2TB+ Migration** – Modernized platform from Hadoop to Snowflake
 - 🛠️ **90% On-Call Reduction** – Implemented automation reducing operational overhead
+
+</div>
