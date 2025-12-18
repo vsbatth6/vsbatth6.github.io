@@ -67,7 +67,7 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 
 </div>
 
-<div class="card hide-for-resume" markdown="1">
+<div class="card" markdown="1">
 
 ### Software Engineer | ETL & Big Data Consultant
 
@@ -108,7 +108,7 @@ New York Institute of Technology | *Cum Laude*
 
 </div>
 
-<div class="card hide-for-resume" markdown="1">
+<div class="card" markdown="1">
 
 ## Key Achievements
 
