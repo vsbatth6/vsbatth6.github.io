@@ -604,8 +604,8 @@ h2:last-of-type + ul li {
         border-bottom: none;
     }
 
-    /* Page break before Technical Skills */
-    .card:nth-child(4) {
+    /* Page break before Technical Skills (5th card) */
+    .card:nth-child(5) {
         page-break-before: always;
     }
 
