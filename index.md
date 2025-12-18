@@ -34,12 +34,6 @@ title: Virinderpal Singh Batth | Data Engineer
 
 Data Engineering leader with 5+ years of experience designing and implementing enterprise-scale data solutions in financial services and insurance. Proven track record of driving significant performance optimizations, pioneering cloud and real-time streaming technologies, and leading cross-functional teams. Expert in Snowflake, AWS, Hadoop, and modern data stack technologies including dbt, Kafka, and PySpark.
 
-## Education
-
-**B.S. in Computer Science** | *Cum Laude*  
-Big Data & Analytics Concentration  
-New York Institute of Technology
-
 </div>
 
 <div class="card" markdown="1">
@@ -101,6 +95,12 @@ New York Institute of Technology
 |**Data Formats**     |JSON, Parquet, REST APIs                                             |
 |**Visualization**    |Apache Superset                                                      |
 |**Practices**        |CI/CD, Data Governance, RBAC, Data Masking, Tokenization             |
+
+## Education
+
+**B.S. in Computer Science** | *Cum Laude*
+Big Data & Analytics Concentration
+New York Institute of Technology
 
 </div>
 
