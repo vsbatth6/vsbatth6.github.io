@@ -50,7 +50,7 @@ New York Institute of Technology
 
 <p class="job-header"><span><strong>evolv Consulting</strong></span><span>Oct 2025 – Present</span></p>
 
-- Leading a team of 4 data engineers to architect an insurance client's first unified operational data store in Snowflake using dbt
+- Leading a team of data engineers to architect an insurance client's first unified operational data store in Snowflake using dbt
 - Navigating complex ambiguities across legacy data platforms from multiple sub-companies to identify data overlaps and establish master data definitions
 - Architecting high-performance data pipelines serving a transactional Kong API layer for real-time business insights
 
