@@ -36,8 +36,8 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 
 ## Education
 
-**Bachelor of Science in Computer Science** | *Cum Laude*
-Concentration: Big Data & Analytics
+**Bachelor of Science in Computer Science** | *Cum Laude*  
+Concentration: Big Data & Analytics  
 New York Institute of Technology
 
 </div>
@@ -75,9 +75,9 @@ New York Institute of Technology
 
 <div class="card" markdown="1">
 
-### ETL & Big Data Consultant
+### Big Data Consultant @ USAA
 
-<p class="job-header"><span><strong>HCL America Inc.</strong></span><span>Client: USAA | Nov 2017 – Apr 2021</span></p>
+<p class="job-header"><span><strong>HCL America Inc.</strong></span><span>Nov 2017 – Apr 2021</span></p>
 
 - Pioneered the first project at USAA to utilize AWS cloud and real-time streaming (NiFi/Kafka), transforming batch to real-time processing
 - Established AWS S3 to HDFS file transfer routes, enabling cloud-to-on-premise data integration
