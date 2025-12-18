@@ -98,8 +98,8 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 
 ## Education
 
-**B.S. in Computer Science** | *Cum Laude*
-Big Data & Analytics Concentration
+**B.S. in Computer Science** | *Cum Laude*<br>
+Big Data & Analytics Concentration<br>
 New York Institute of Technology
 
 </div>
