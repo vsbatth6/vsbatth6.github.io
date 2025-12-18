@@ -7,7 +7,7 @@ title: Virinderpal Singh Batth | Data Engineer
 
 # Virinderpal Singh Batth
 
-**Lead Data Engineer**
+**Curriculum Vitae**
 
 <div class="contact-info">
   <a href="https://linkedin.com/in/vbatth" class="linkedin-link">
@@ -36,8 +36,8 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 
 ## Education
 
-**Bachelor of Science in Computer Science** | *Cum Laude*  
-Concentration: Big Data & Analytics  
+**B.S. in Computer Science** | *Cum Laude*  
+Big Data & Analytics Concentration  
 New York Institute of Technology
 
 </div>
