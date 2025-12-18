@@ -662,6 +662,10 @@ h2:last-of-type + ul li {
     }
 
     ul, p {
+        /* Allow lists to break across pages, but keep individual items together */
+    }
+
+    li {
         page-break-inside: avoid;
     }
 
