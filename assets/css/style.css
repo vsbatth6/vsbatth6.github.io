@@ -578,12 +578,39 @@ h2:last-of-type + ul li {
     .container {
         max-width: 100%;
         padding: 0;
+        height: auto;
+        overflow: visible;
     }
 
     .content {
         box-shadow: none;
         padding: 0;
         position: relative;
+        /* Reset mobile card scroll styles */
+        scroll-snap-type: none;
+        overflow: visible;
+        height: auto;
+    }
+
+    /* Reset card styles for print */
+    .card {
+        scroll-snap-align: none;
+        min-height: auto;
+        height: auto;
+        padding: 0;
+        display: block;
+        position: static;
+        background: transparent;
+        border-bottom: none;
+    }
+
+    .card::after {
+        display: none;
+    }
+
+    /* Hide card navigation dots */
+    .card-nav {
+        display: none !important;
     }
 
     .footer {
