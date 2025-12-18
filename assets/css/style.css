@@ -604,6 +604,11 @@ h2:last-of-type + ul li {
         border-bottom: none;
     }
 
+    /* Page break before Technical Skills */
+    .card:nth-child(4) {
+        page-break-before: always;
+    }
+
     .card::after {
         display: none;
     }
@@ -617,8 +622,17 @@ h2:last-of-type + ul li {
         display: none;
     }
 
+    /* Ensure all text is black for print */
+    h1, h2, h3, h4, h5, h6, p, li, td, th, strong {
+        color: #000 !important;
+    }
+
     /* Header layout for print: name/role on left, links on right */
-    .content > h1:first-child {
+    .card:first-child {
+        position: relative;
+    }
+
+    .card h1 {
         text-align: left !important;
         font-size: 20pt;
         color: #000 !important;
