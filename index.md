@@ -99,7 +99,7 @@ New York Institute of Technology
 |**Data Engineering** |dbt, Kafka, Flink, NiFi, Hadoop, IBM DataStage                       |
 |**Cloud & Platforms**|AWS (S3, EC2, Redshift, Lambda, Athena), Snowflake, DB2              |
 |**Data Formats**     |JSON, Parquet, REST APIs                                             |
-|**Visualization**    |Apache Superset, Looker, Tableau                                     |
+|**Visualization**    |Apache Superset                                                      |
 |**Practices**        |CI/CD, Data Governance, RBAC, Data Masking, Tokenization             |
 
 </div>
