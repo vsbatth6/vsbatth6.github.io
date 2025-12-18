@@ -1028,3 +1028,134 @@ button:focus {
     outline: 2px solid var(--secondary-color);
     outline-offset: 2px;
 }
+
+/* ===========================
+   Mobile Card Swipe UI
+   =========================== */
+
+@media (max-width: 768px) {
+    /* Card container - full viewport scroll snap */
+    .content {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        padding: 0;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Individual cards */
+    .card {
+        scroll-snap-align: start;
+        min-height: 100vh;
+        padding: 1.5rem;
+        padding-top: 4rem; /* Space for fixed buttons */
+        padding-bottom: 3rem; /* Space for peek + dots */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        position: relative;
+        background: var(--bg-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    /* Remove default margins in card mode */
+    .card h1,
+    .card h2,
+    .card h3 {
+        margin-top: 0;
+    }
+
+    .card h2 {
+        border-bottom: 2px solid var(--secondary-color);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Container adjustments for card mode */
+    .container {
+        padding: 0;
+        max-width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Hide footer in card mode */
+    .footer {
+        display: none;
+    }
+
+    /* Peek indicator - shows there's more content */
+    .card::after {
+        content: '';
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 4px;
+        background: var(--border-color);
+        border-radius: 2px;
+        opacity: 0.6;
+    }
+
+    /* Last card doesn't need peek indicator */
+    .card:last-child::after {
+        display: none;
+    }
+
+    /* Table responsive in cards */
+    .card table {
+        font-size: 0.75rem;
+    }
+
+    .card th,
+    .card td {
+        padding: 0.5rem;
+    }
+
+    /* Contact info adjustments */
+    .card .contact-info {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Navigation dots container */
+.card-nav {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .card-nav {
+        display: flex;
+        position: fixed;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        flex-direction: column;
+        gap: 0.5rem;
+        z-index: 9998;
+    }
+
+    .card-nav-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--border-color);
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        padding: 0;
+    }
+
+    .card-nav-dot:hover {
+        background: var(--secondary-color);
+        transform: scale(1.3);
+    }
+
+    .card-nav-dot.active {
+        background: var(--secondary-color);
+        transform: scale(1.3);
+    }
+}

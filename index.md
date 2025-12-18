@@ -3,6 +3,8 @@ layout: default
 title: Virinderpal Singh Batth | Data Engineer
 ---
 
+<div class="card" markdown="1">
+
 # Virinderpal Singh Batth
 
 **Lead Data Engineer**
@@ -32,6 +34,10 @@ title: Virinderpal Singh Batth | Data Engineer
 
 Data Engineering leader with 5+ years of experience designing and implementing enterprise-scale data solutions in financial services and insurance. Proven track record of driving significant performance optimizations, pioneering cloud and real-time streaming technologies, and leading cross-functional teams. Expert in Snowflake, AWS, Hadoop, and modern data stack technologies including dbt, Kafka, and PySpark.
 
+</div>
+
+<div class="card" markdown="1">
+
 ## Experience
 
 ### Lead Data Engineer | Insurance
@@ -41,6 +47,10 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 - Leading a team of 4 data engineers to architect an insurance client's first unified operational data store in Snowflake using dbt
 - Navigating complex ambiguities across legacy data platforms from multiple sub-companies to identify data overlaps and establish master data definitions
 - Architecting high-performance data pipelines serving a transactional Kong API layer for real-time business insights
+
+</div>
+
+<div class="card" markdown="1">
 
 ### Data Engineer | Financial Credit Risk
 
@@ -55,12 +65,13 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 - Architected cross-organizational data lake POC with AWS S3, reducing transfer time by 50%
 - Enhanced PII/PCI/PHI pipeline security with data masking, tokenization, and RBAC
 
+</div>
+
+<div class="card hide-for-resume" markdown="1">
+
 ### Software Engineer | ETL & Big Data Consultant
-{: .hide-for-resume}
 
-<p class="job-header hide-for-resume"><span><strong>HCL America Inc.</strong></span><span>Client: USAA | Nov 2017 – Apr 2021</span></p>
-
-<div class="hide-for-resume" markdown="1">
+<p class="job-header"><span><strong>HCL America Inc.</strong></span><span>Client: USAA | Nov 2017 – Apr 2021</span></p>
 
 - Pioneered the first project at USAA to utilize AWS cloud and real-time streaming (NiFi/Kafka), transforming batch to real-time processing
 - Established AWS S3 to HDFS file transfer routes, enabling cloud-to-on-premise data integration
@@ -71,6 +82,8 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 - Ensured PII/non-PII compliance with Information Governance standards
 
 </div>
+
+<div class="card" markdown="1">
 
 ## Technical Skills
 
@@ -83,13 +96,19 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 |**Visualization**    |Apache Superset, Looker, Tableau                                     |
 |**Practices**        |CI/CD, Data Governance, RBAC, Data Masking, Tokenization             |
 
+</div>
+
+<div class="card" markdown="1">
+
 ## Education
 
 **Bachelor of Science in Computer Science**
 Concentration: Big Data & Analytics
 New York Institute of Technology | *Cum Laude*
 
-<div class="hide-for-resume" markdown="1">
+</div>
+
+<div class="card hide-for-resume" markdown="1">
 
 ## Key Achievements
 
