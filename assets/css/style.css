@@ -911,7 +911,7 @@ h2:last-of-type + ul li {
 }
 
 /* Responsive button positioning */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .theme-toggle {
         top: 0.75rem;
         right: 0.75rem;
@@ -938,7 +938,7 @@ h2:last-of-type + ul li {
 }
 
 /* Extra small screens */
-@media (max-width: 380px) {
+@media screen and (max-width: 380px) {
     .theme-toggle {
         top: 0.5rem;
         right: 0.5rem;
@@ -987,7 +987,7 @@ button:focus {
    Mobile Card Swipe UI
    =========================== */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     /* Card container - full viewport scroll snap */
     .content {
         scroll-snap-type: y mandatory;
@@ -1080,7 +1080,7 @@ button:focus {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .card-nav {
         display: flex;
         position: fixed;
