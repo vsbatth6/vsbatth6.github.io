@@ -69,7 +69,7 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 
 <div class="card" markdown="1">
 
-### Software Engineer | ETL & Big Data Consultant
+### ETL & Big Data Consultant
 
 <p class="job-header"><span><strong>HCL America Inc.</strong></span><span>Client: USAA | Nov 2017 – Apr 2021</span></p>
 
@@ -102,9 +102,11 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 
 ## Education
 
-**Bachelor of Science in Computer Science**
+**Bachelor of Science in Computer Science** | *Cum Laude*
+
 Concentration: Big Data & Analytics
-New York Institute of Technology | *Cum Laude*
+
+New York Institute of Technology
 
 </div>
 
