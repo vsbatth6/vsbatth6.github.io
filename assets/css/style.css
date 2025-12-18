@@ -875,10 +875,54 @@ h2:last-of-type + ul li {
     height: 20px;
 }
 
+/* Print Resume button */
+.print-button {
+    position: fixed;
+    top: 9.5rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Mobile/touch support */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.print-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.print-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.print-button svg {
+    width: 20px;
+    height: 20px;
+}
+
 /* Hide buttons in print */
 @media print {
     .theme-toggle,
-    .pdf-download {
+    .pdf-download,
+    .print-button {
         display: none !important;
     }
 }
@@ -908,6 +952,18 @@ h2:last-of-type + ul li {
         width: 20px;
         height: 20px;
     }
+
+    .print-button {
+        top: 7.75rem;
+        right: 0.75rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    .print-button svg {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 /* Extra small screens */
@@ -932,6 +988,18 @@ h2:last-of-type + ul li {
     }
 
     .pdf-download svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .print-button {
+        top: 7rem;
+        right: 0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .print-button svg {
         width: 18px;
         height: 18px;
     }
