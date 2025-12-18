@@ -169,6 +169,28 @@
 */
 
 /* ===========================
+   Dark Mode Specific Overrides
+   =========================== */
+
+:root[data-theme="dark"] .content,
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .content {
+        border: 1px solid var(--border-color);
+    }
+}
+
+/* Table header in dark mode */
+:root[data-theme="dark"] thead {
+    background-color: #1e2f28;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) thead {
+        background-color: #1e2f28;
+    }
+}
+
+/* ===========================
    Typography
    =========================== */
 
@@ -473,9 +495,140 @@ h2:last-of-type + ul li {
 }
 
 /* ===========================
+   Floating Buttons
+   =========================== */
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: pulse-once 2s ease-in-out;
+    /* Mobile/touch support */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+@keyframes pulse-once {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.theme-toggle:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Active state for touch feedback */
+.theme-toggle:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(15deg);
+}
+
+/* Sun icon (shown in dark mode) */
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+/* Moon icon (shown in light mode) */
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle .sun-icon {
+    display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle .moon-icon {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .sun-icon {
+        display: block;
+    }
+    :root:not([data-theme="light"]) .theme-toggle .moon-icon {
+        display: none;
+    }
+}
+
+/* PDF Download button */
+.pdf-download {
+    position: fixed;
+    top: 5.5rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Mobile/touch support */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+}
+
+.pdf-download:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-download:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pdf-download svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ===========================
    Responsive Design
    =========================== */
 
+/* Tablet and mobile */
 @media (max-width: 768px) {
     .container {
         padding: 1.5rem 1rem;
@@ -514,6 +667,7 @@ h2:last-of-type + ul li {
     }
 }
 
+/* Small phones */
 @media (max-width: 480px) {
     body {
         font-size: 14px;
@@ -547,6 +701,190 @@ h2:last-of-type + ul li {
     .website-icon {
         width: 18px;
         height: 18px;
+    }
+}
+
+/* Responsive button positioning */
+@media screen and (max-width: 768px) {
+    .theme-toggle {
+        top: 0.75rem;
+        right: 0.75rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    .theme-toggle svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .pdf-download {
+        top: 4.25rem;
+        right: 0.75rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    .pdf-download svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 380px) {
+    .theme-toggle {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .pdf-download {
+        top: 3.75rem;
+        right: 0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .pdf-download svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* ===========================
+   Mobile Card Swipe UI
+   =========================== */
+
+/* Navigation dots container (default hidden) */
+.card-nav {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    /* Card container - full viewport scroll snap */
+    .content {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        padding: 0;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Individual cards */
+    .card {
+        scroll-snap-align: start;
+        min-height: 100vh;
+        padding: 1.5rem;
+        padding-top: 4rem; /* Space for fixed buttons */
+        padding-bottom: 3rem; /* Space for peek + dots */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        position: relative;
+        background: var(--bg-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    /* Remove default margins in card mode */
+    .card h1,
+    .card h2,
+    .card h3 {
+        margin-top: 0;
+    }
+
+    .card h2 {
+        border-bottom: 2px solid var(--secondary-color);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Container adjustments for card mode */
+    .container {
+        padding: 0;
+        max-width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Hide footer in card mode */
+    .footer {
+        display: none;
+    }
+
+    /* Peek indicator - shows there's more content */
+    .card::after {
+        content: '';
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 4px;
+        background: var(--border-color);
+        border-radius: 2px;
+        opacity: 0.6;
+    }
+
+    /* Last card doesn't need peek indicator */
+    .card:last-child::after {
+        display: none;
+    }
+
+    /* Table responsive in cards */
+    .card table {
+        font-size: 0.75rem;
+    }
+
+    .card th,
+    .card td {
+        padding: 0.5rem;
+    }
+
+    /* Contact info adjustments */
+    .card .contact-info {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Navigation dots */
+    .card-nav {
+        display: flex;
+        position: fixed;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        flex-direction: column;
+        gap: 0.5rem;
+        z-index: 9998;
+    }
+
+    .card-nav-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--border-color);
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        padding: 0;
+    }
+
+    .card-nav-dot:hover {
+        background: var(--secondary-color);
+        transform: scale(1.3);
+    }
+
+    .card-nav-dot.active {
+        background: var(--secondary-color);
+        transform: scale(1.3);
     }
 }
 
@@ -750,207 +1088,6 @@ h2:last-of-type + ul li {
 }
 
 /* ===========================
-   Dark Mode Specific Overrides
-   =========================== */
-:root[data-theme="dark"] .content,
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .content {
-        border: 1px solid var(--border-color);
-    }
-}
-
-/* Table header in dark mode */
-:root[data-theme="dark"] thead {
-    background-color: #1e2f28;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) thead {
-        background-color: #1e2f28;
-    }
-}
-
-/* Theme toggle button */
-.theme-toggle {
-    position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 2px solid var(--secondary-color);
-    background-color: var(--bg-color);
-    color: var(--secondary-color);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    z-index: 9999;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    animation: pulse-once 2s ease-in-out;
-    /* Mobile/touch support */
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-@keyframes pulse-once {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
-
-.theme-toggle:hover {
-    background-color: var(--secondary-color);
-    color: var(--bg-color);
-    border-color: var(--secondary-color);
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Active state for touch feedback */
-.theme-toggle:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.theme-toggle svg {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s ease;
-}
-
-.theme-toggle:hover svg {
-    transform: rotate(15deg);
-}
-
-/* Sun icon (shown in dark mode) */
-.theme-toggle .sun-icon {
-    display: none;
-}
-
-/* Moon icon (shown in light mode) */
-.theme-toggle .moon-icon {
-    display: block;
-}
-
-:root[data-theme="dark"] .theme-toggle .sun-icon {
-    display: block;
-}
-
-:root[data-theme="dark"] .theme-toggle .moon-icon {
-    display: none;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .theme-toggle .sun-icon {
-        display: block;
-    }
-    :root:not([data-theme="light"]) .theme-toggle .moon-icon {
-        display: none;
-    }
-}
-
-/* PDF Download button */
-.pdf-download {
-    position: fixed;
-    top: 5.5rem;
-    right: 1.5rem;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 2px solid var(--secondary-color);
-    background-color: var(--bg-color);
-    color: var(--secondary-color);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    z-index: 9999;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    /* Mobile/touch support */
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-    user-select: none;
-    -webkit-user-select: none;
-    text-decoration: none;
-}
-
-.pdf-download:hover {
-    background-color: var(--secondary-color);
-    color: var(--bg-color);
-    border-color: var(--secondary-color);
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.pdf-download:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.pdf-download svg {
-    width: 20px;
-    height: 20px;
-}
-
-/* Responsive button positioning */
-@media screen and (max-width: 768px) {
-    .theme-toggle {
-        top: 0.75rem;
-        right: 0.75rem;
-        width: 44px;
-        height: 44px;
-    }
-
-    .theme-toggle svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .pdf-download {
-        top: 4.25rem;
-        right: 0.75rem;
-        width: 44px;
-        height: 44px;
-    }
-
-    .pdf-download svg {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-/* Extra small screens */
-@media screen and (max-width: 380px) {
-    .theme-toggle {
-        top: 0.5rem;
-        right: 0.5rem;
-        width: 40px;
-        height: 40px;
-    }
-
-    .theme-toggle svg {
-        width: 18px;
-        height: 18px;
-    }
-
-    .pdf-download {
-        top: 3.75rem;
-        right: 0.5rem;
-        width: 40px;
-        height: 40px;
-    }
-
-    .pdf-download svg {
-        width: 18px;
-        height: 18px;
-    }
-}
-
-/* ===========================
    Accessibility
    =========================== */
 
@@ -967,135 +1104,4 @@ a:focus,
 button:focus {
     outline: 2px solid var(--secondary-color);
     outline-offset: 2px;
-}
-
-/* ===========================
-   Mobile Card Swipe UI
-   =========================== */
-
-@media screen and (max-width: 768px) {
-    /* Card container - full viewport scroll snap */
-    .content {
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-        height: 100vh;
-        padding: 0;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    /* Individual cards */
-    .card {
-        scroll-snap-align: start;
-        min-height: 100vh;
-        padding: 1.5rem;
-        padding-top: 4rem; /* Space for fixed buttons */
-        padding-bottom: 3rem; /* Space for peek + dots */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        box-sizing: border-box;
-        position: relative;
-        background: var(--bg-color);
-        border-bottom: 1px solid var(--border-color);
-    }
-
-    /* Remove default margins in card mode */
-    .card h1,
-    .card h2,
-    .card h3 {
-        margin-top: 0;
-    }
-
-    .card h2 {
-        border-bottom: 2px solid var(--secondary-color);
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-    /* Container adjustments for card mode */
-    .container {
-        padding: 0;
-        max-width: 100%;
-        height: 100vh;
-        overflow: hidden;
-    }
-
-    /* Hide footer in card mode */
-    .footer {
-        display: none;
-    }
-
-    /* Peek indicator - shows there's more content */
-    .card::after {
-        content: '';
-        position: absolute;
-        bottom: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 4px;
-        background: var(--border-color);
-        border-radius: 2px;
-        opacity: 0.6;
-    }
-
-    /* Last card doesn't need peek indicator */
-    .card:last-child::after {
-        display: none;
-    }
-
-    /* Table responsive in cards */
-    .card table {
-        font-size: 0.75rem;
-    }
-
-    .card th,
-    .card td {
-        padding: 0.5rem;
-    }
-
-    /* Contact info adjustments */
-    .card .contact-info {
-        margin-bottom: 1.5rem;
-    }
-}
-
-/* Navigation dots container */
-.card-nav {
-    display: none;
-}
-
-@media screen and (max-width: 768px) {
-    .card-nav {
-        display: flex;
-        position: fixed;
-        right: 0.75rem;
-        top: 50%;
-        transform: translateY(-50%);
-        flex-direction: column;
-        gap: 0.5rem;
-        z-index: 9998;
-    }
-
-    .card-nav-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--border-color);
-        border: none;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        padding: 0;
-    }
-
-    .card-nav-dot:hover {
-        background: var(--secondary-color);
-        transform: scale(1.3);
-    }
-
-    .card-nav-dot.active {
-        background: var(--secondary-color);
-        transform: scale(1.3);
-    }
 }
