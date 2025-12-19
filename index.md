@@ -7,7 +7,7 @@ title: Virinderpal Singh Batth | Data Engineer
 
 # Virinderpal Singh Batth
 
-**Curriculum Vitae**
+**Lead Data Engineer**
 
 <div class="contact-info">
   <a href="https://linkedin.com/in/vbatth" class="linkedin-link">
@@ -32,7 +32,7 @@ title: Virinderpal Singh Batth | Data Engineer
 
 ## Professional Summary
 
-Data Engineering leader with 5+ years of experience designing and implementing enterprise-scale data solutions in financial services and insurance. Proven track record of driving significant performance optimizations, pioneering cloud and real-time streaming technologies, and leading cross-functional teams. Expert in Snowflake, dbt, AWS, Hadoop, and modern data stack technologies including Kafka and PySpark.
+Data Engineering leader | 5+ years in financial services & insurance | Expert in Snowflake, dbt, AWS, Kafka | Delivered 95% compute reduction, 2TB+ migrations, real-time streaming
 
 </div>
 
@@ -45,7 +45,7 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 <p class="job-header"><span><strong>evolv Consulting</strong></span><span>Oct 2025 – Present</span></p>
 
 - Leading a team of data engineers to architect an insurance client's first unified operational data store in Snowflake using dbt
-- Navigating complex ambiguities across legacy data platforms from multiple sub-companies to identify data overlaps and establish master data definitions
+- Establishing master data definitions across legacy platforms from multiple sub-companies
 - Architecting high-performance data pipelines serving a transactional Kong API layer for real-time business insights
 
 </div>
