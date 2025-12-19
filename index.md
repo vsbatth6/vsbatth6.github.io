@@ -32,7 +32,7 @@ title: Virinderpal Singh Batth | Data Engineer
 
 ## Professional Summary
 
-Data Engineering leader with 5+ years of experience designing and implementing enterprise-scale data solutions in financial services and insurance. Proven track record of driving significant performance optimizations, pioneering cloud and real-time streaming technologies, and leading cross-functional teams. Expert in Snowflake, AWS, Hadoop, and modern data stack technologies including dbt, Kafka, and PySpark.
+Data Engineering leader with 5+ years of experience designing and implementing enterprise-scale data solutions in financial services and insurance. Proven track record of driving significant performance optimizations, pioneering cloud and real-time streaming technologies, and leading cross-functional teams. Expert in Snowflake, dbt, AWS, Hadoop, and modern data stack technologies including Kafka and PySpark.
 
 </div>
 
@@ -69,7 +69,7 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 
 <div class="card" markdown="1">
 
-### Big Data Consultant @ USAA
+### Big Data Consultant | USAA
 
 <p class="job-header"><span><strong>HCL America Inc.</strong></span><span>Nov 2017 – Apr 2021</span></p>
 
@@ -100,6 +100,6 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 
 **B.S. in Computer Science** | *Cum Laude*<br>
 Big Data & Analytics Concentration<br>
-New York Institute of Technology
+New York Institute of Technology, New York
 
 </div>
