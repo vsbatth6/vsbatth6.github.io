@@ -103,16 +103,3 @@ Big Data & Analytics Concentration<br>
 New York Institute of Technology
 
 </div>
-
-<div class="card" markdown="1">
-
-## Key Achievements
-
-- 🚀 **First-Mover Innovation** – Delivered USAA's first AWS cloud and real-time streaming project
-- ⚡ **95% Compute Reduction** – Resolved critical Snowflake performance bottleneck
-- 🎯 **90% Query Optimization** – Reduced SCD Type 2 queries from 3 hours to 15 minutes
-- 📈 **30% Engagement Lift** – Led data initiative driving measurable business outcomes
-- 🔄 **2TB+ Migration** – Modernized platform from Hadoop to Snowflake
-- 🛠️ **90% On-Call Reduction** – Implemented automation reducing operational overhead
-
-</div>
