@@ -32,7 +32,7 @@ title: Virinderpal Singh Batth | Data Engineer
 
 ## Professional Summary
 
-Data Engineering leader with 5+ years building enterprise data solutions in financial services and insurance. Skilled in Snowflake, dbt, AWS, and Kafka, with a track record of delivering 95% compute reductions, 2TB+ migrations, and real-time streaming architectures.
+Data Engineering leader with 5+ years building enterprise data solutions in financial services and insurance. Currently leading a team architecting unified data stores and real-time API pipelines for insurance clients. Skilled in Snowflake, dbt, AWS, and Kafka, with a track record of delivering 95% compute reductions, 2TB+ migrations, and real-time streaming architectures.
 
 </div>
 
