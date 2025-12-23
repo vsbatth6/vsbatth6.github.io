@@ -169,6 +169,28 @@
 */
 
 /* ===========================
+   Dark Mode Specific Overrides
+   =========================== */
+
+:root[data-theme="dark"] .content,
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .content {
+        border: 1px solid var(--border-color);
+    }
+}
+
+/* Table header in dark mode */
+:root[data-theme="dark"] thead {
+    background-color: #1e2f28;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) thead {
+        background-color: #1e2f28;
+    }
+}
+
+/* ===========================
    Typography
    =========================== */
 
@@ -231,25 +253,20 @@ h3 {
    Header Styles
    =========================== */
 
-.content > h1:first-child {
+.content > h1:first-child,
+.card:first-child h1 {
     text-align: center;
     color: var(--primary-color);
     margin-bottom: 0.25rem;
 }
 
-.content > p:first-of-type {
+.content > p:first-of-type,
+.card:first-child > p:first-of-type {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: var(--secondary-color);
     margin-bottom: 0.75rem;
-}
-
-.content > p:nth-of-type(2) {
-    text-align: center;
-    color: var(--text-light);
-    margin-bottom: 2rem;
-    font-size: 0.95rem;
 }
 
 /* Contact Info Styles */
@@ -264,15 +281,6 @@ h3 {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-}
-
-.contact-item {
-    white-space: nowrap;
-}
-
-.contact-separator {
-    color: var(--border-color);
-    font-weight: 300;
 }
 
 .linkedin-link,
@@ -487,263 +495,8 @@ h2:last-of-type + ul li {
 }
 
 /* ===========================
-   Responsive Design
+   Floating Buttons
    =========================== */
-
-@media (max-width: 768px) {
-    .container {
-        padding: 1.5rem 1rem;
-    }
-
-    .content {
-        padding: 1.5rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-
-    table {
-        font-size: 0.85rem;
-    }
-
-    th, td {
-        padding: 0.75rem;
-    }
-
-    /* Reduce icon size on tablets/mobile */
-    .linkedin-icon,
-    .github-icon,
-    .website-icon {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    h1 {
-        font-size: 1.75rem;
-    }
-
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    table {
-        font-size: 0.8rem;
-    }
-
-    th, td {
-        padding: 0.5rem;
-    }
-
-    /* Keep contact info on one line on mobile */
-    .contact-info {
-        font-size: 1.1rem;
-        gap: 0.4rem;
-    }
-
-    /* Further reduce icons on small phones */
-    .linkedin-icon,
-    .github-icon,
-    .website-icon {
-        width: 18px;
-        height: 18px;
-    }
-}
-
-/* ===========================
-   Print Styles
-   =========================== */
-
-@media print {
-    body {
-        font-size: 11pt;
-        color: #000;
-        background: white;
-    }
-
-    .container {
-        max-width: 100%;
-        padding: 0;
-    }
-
-    .content {
-        box-shadow: none;
-        padding: 0;
-        position: relative;
-    }
-
-    .footer {
-        display: none;
-    }
-
-    /* Header layout for print: name/role on left, links on right */
-    .content > h1:first-child {
-        text-align: left !important;
-        font-size: 24pt;
-        color: #000 !important;
-        margin-bottom: 0.25rem;
-    }
-
-    .content > p:first-of-type {
-        text-align: left !important;
-        font-size: 14pt;
-        color: #000 !important;
-        margin-bottom: 1rem;
-    }
-
-    /* Position contact info on the right side */
-    .contact-info {
-        position: absolute;
-        top: 0;
-        right: 0;
-        text-align: right !important;
-        align-items: flex-end !important;
-        font-size: 10pt;
-        margin-bottom: 0;
-        gap: 0.25rem;
-    }
-
-    /* Show full URLs in print */
-    .linkedin-link::after {
-        content: " linkedin.com/in/vbatth";
-        margin-left: 0.25rem;
-    }
-
-    .github-link::after {
-        content: " github.com/vsbatth6";
-        margin-left: 0.25rem;
-    }
-
-    .website-link::after {
-        content: " vsbatth.com";
-        margin-left: 0.25rem;
-    }
-
-    /* Hide link text, show only icon + URL */
-    .linkedin-link,
-    .github-link,
-    .website-link {
-        color: #000;
-        font-size: 0;
-    }
-
-    .linkedin-link::after,
-    .github-link::after,
-    .website-link::after {
-        font-size: 10pt;
-    }
-
-    h2 {
-        font-size: 16pt;
-        page-break-after: avoid;
-        color: #000;
-        border-bottom: 2px solid #000;
-        margin-top: 1.5rem;
-    }
-
-    h3 {
-        font-size: 13pt;
-        page-break-after: avoid;
-        color: #000;
-    }
-
-    ul, p {
-        page-break-inside: avoid;
-    }
-
-    a {
-        color: #000;
-        text-decoration: none;
-    }
-
-    table {
-        box-shadow: none;
-    }
-
-    /* Override company name boxes to black and white */
-    .job-header {
-        background-color: transparent;
-        border: none;
-        box-shadow: none;
-        color: #000;
-        padding: 0;
-    }
-
-    .job-header strong {
-        color: #000;
-    }
-
-    /* Override table colors for print */
-    thead {
-        background-color: #000;
-        color: white;
-    }
-
-    td strong {
-        color: #000;
-    }
-
-    /* Override Key Achievements borders to black */
-    h2:last-of-type + ul li {
-        background-color: #f5f5f5;
-        border-left: 4px solid #000;
-    }
-
-    /* Override Key Achievements bold text to black */
-    h2:last-of-type + ul li strong {
-        color: #000 !important;
-    }
-
-    /* LinkedIn icon in print */
-    .linkedin-icon {
-        width: 14px;
-        height: 14px;
-    }
-
-    .linkedin-link {
-        color: #000;
-    }
-
-    /* Override any remaining colored elements */
-    strong {
-        color: #000;
-    }
-}
-
-/* ===========================
-   Dark Mode Specific Overrides
-   =========================== */
-:root[data-theme="dark"] .content,
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .content {
-        border: 1px solid var(--border-color);
-    }
-}
-
-/* Table header in dark mode */
-:root[data-theme="dark"] thead {
-    background-color: #1e2f28;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) thead {
-        background-color: #1e2f28;
-    }
-}
 
 /* Theme toggle button */
 .theme-toggle {
@@ -871,16 +624,88 @@ h2:last-of-type + ul li {
     height: 20px;
 }
 
-/* Hide buttons in print */
-@media print {
-    .theme-toggle,
-    .pdf-download {
-        display: none !important;
+/* ===========================
+   Responsive Design
+   =========================== */
+
+/* Tablet and mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 0.75rem;
+    }
+
+    /* Reduce icon size on tablets/mobile */
+    .linkedin-icon,
+    .github-icon,
+    .website-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+    }
+
+    /* Keep contact info on one line on mobile */
+    .contact-info {
+        font-size: 1.1rem;
+        gap: 0.4rem;
+    }
+
+    /* Further reduce icons on small phones */
+    .linkedin-icon,
+    .github-icon,
+    .website-icon {
+        width: 18px;
+        height: 18px;
     }
 }
 
 /* Responsive button positioning */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .theme-toggle {
         top: 0.75rem;
         right: 0.75rem;
@@ -907,7 +732,7 @@ h2:last-of-type + ul li {
 }
 
 /* Extra small screens */
-@media (max-width: 380px) {
+@media screen and (max-width: 380px) {
     .theme-toggle {
         top: 0.5rem;
         right: 0.5rem;
@@ -930,6 +755,335 @@ h2:last-of-type + ul li {
     .pdf-download svg {
         width: 18px;
         height: 18px;
+    }
+}
+
+/* ===========================
+   Mobile Card Swipe UI
+   =========================== */
+
+/* Navigation dots container (default hidden) */
+.card-nav {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    /* Card container - full viewport scroll snap */
+    .content {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        padding: 0;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Individual cards */
+    .card {
+        scroll-snap-align: start;
+        min-height: 100vh;
+        padding: 1.5rem;
+        padding-top: 4rem; /* Space for fixed buttons */
+        padding-bottom: 3rem; /* Space for peek + dots */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        position: relative;
+        background: var(--bg-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    /* Remove default margins in card mode */
+    .card h1,
+    .card h2,
+    .card h3 {
+        margin-top: 0;
+    }
+
+    .card h2 {
+        border-bottom: 2px solid var(--secondary-color);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Container adjustments for card mode */
+    .container {
+        padding: 0;
+        max-width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Hide footer in card mode */
+    .footer {
+        display: none;
+    }
+
+    /* Peek indicator - shows there's more content */
+    .card::after {
+        content: '';
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 4px;
+        background: var(--border-color);
+        border-radius: 2px;
+        opacity: 0.6;
+    }
+
+    /* Last card doesn't need peek indicator */
+    .card:last-child::after {
+        display: none;
+    }
+
+    /* Table responsive in cards */
+    .card table {
+        font-size: 0.75rem;
+    }
+
+    .card th,
+    .card td {
+        padding: 0.5rem;
+    }
+
+    /* Contact info adjustments */
+    .card .contact-info {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Navigation dots */
+    .card-nav {
+        display: flex;
+        position: fixed;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        flex-direction: column;
+        gap: 0.5rem;
+        z-index: 9998;
+    }
+
+    .card-nav-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--border-color);
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        padding: 0;
+    }
+
+    .card-nav-dot:hover {
+        background: var(--secondary-color);
+        transform: scale(1.3);
+    }
+
+    .card-nav-dot.active {
+        background: var(--secondary-color);
+        transform: scale(1.3);
+    }
+}
+
+/* ===========================
+   Print Styles
+   =========================== */
+
+@media print {
+    body {
+        font-size: 11pt;
+        color: #000;
+        background: white;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+        height: auto;
+        overflow: visible;
+    }
+
+    .content {
+        box-shadow: none;
+        padding: 0;
+        position: relative;
+        /* Reset mobile card scroll styles */
+        scroll-snap-type: none;
+        overflow: visible;
+        height: auto;
+    }
+
+    /* Reset card styles for print */
+    .card {
+        scroll-snap-align: none;
+        min-height: auto;
+        height: auto;
+        padding: 0;
+        display: block;
+        position: static;
+        background: transparent;
+        border-bottom: none;
+    }
+
+    /* Page break before Technical Skills & Education (5th card) */
+    .card:nth-child(5) {
+        page-break-before: always;
+    }
+
+    .card::after {
+        display: none;
+    }
+
+    /* Hide card navigation dots */
+    .card-nav {
+        display: none !important;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    /* Ensure all text is black for print */
+    h1, h2, h3, h4, h5, h6, p, li, td, th, strong {
+        color: #000 !important;
+    }
+
+    /* Header layout for print: name/role on left, links on right */
+    .card:first-child {
+        position: relative;
+    }
+
+    .card h1 {
+        text-align: left !important;
+        font-size: 20pt;
+        color: #000 !important;
+        margin-bottom: 0.25rem;
+    }
+
+    .content > p:first-of-type,
+    .card:first-child > p:first-of-type {
+        text-align: left !important;
+        font-size: 16pt;
+        color: #000 !important;
+        margin-bottom: 1rem;
+    }
+
+    /* Position contact info on the right side */
+    .contact-info {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right !important;
+        align-items: flex-end !important;
+        font-size: 10pt;
+        margin-bottom: 0;
+        gap: 0.25rem;
+    }
+
+    /* Show full URLs in print */
+    .linkedin-link::after {
+        content: " linkedin.com/in/vbatth";
+        margin-left: 0.25rem;
+    }
+
+    .github-link::after {
+        content: " github.com/vsbatth6";
+        margin-left: 0.25rem;
+    }
+
+    .website-link::after {
+        content: " vsbatth.com";
+        margin-left: 0.25rem;
+    }
+
+    /* Hide link text, show only icon + URL */
+    .linkedin-link,
+    .github-link,
+    .website-link {
+        color: #000;
+        font-size: 0;
+    }
+
+    .linkedin-link::after,
+    .github-link::after,
+    .website-link::after {
+        font-size: 10pt;
+    }
+
+    h2 {
+        font-size: 14pt;
+        page-break-after: avoid;
+        color: #000;
+        border-bottom: 2px solid #000;
+        margin-top: 1.5rem;
+    }
+
+    h3 {
+        font-size: 12pt;
+        page-break-after: avoid;
+        color: #000;
+    }
+
+    li {
+        page-break-inside: avoid;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    table {
+        box-shadow: none;
+    }
+
+    /* Override company name boxes to black and white */
+    .job-header {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        color: #000;
+        padding: 0;
+    }
+
+    .job-header strong {
+        color: #000;
+    }
+
+    /* Override table colors for print */
+    thead {
+        background-color: #000;
+        color: white;
+    }
+
+    td strong {
+        color: #000;
+    }
+
+    /* Override Key Achievements borders to black */
+    h2:last-of-type + ul li {
+        background-color: #f5f5f5;
+        border-left: 4px solid #000;
+    }
+
+    /* Override Key Achievements bold text to black */
+    h2:last-of-type + ul li strong {
+        color: #000 !important;
+    }
+
+    /* LinkedIn icon in print */
+    .linkedin-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Hide buttons in print */
+    .theme-toggle,
+    .pdf-download {
+        display: none !important;
     }
 }
 

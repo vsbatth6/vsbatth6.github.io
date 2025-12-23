@@ -3,12 +3,14 @@ layout: default
 title: Virinderpal Singh Batth | Data Engineer
 ---
 
+<div class="card" markdown="1">
+
 # Virinderpal Singh Batth
 
-**Lead Data Engineer**
+**Data Engineer CV**
 
 <div class="contact-info">
-  <a href="https://linkedin.com/in/vbatth" class="linkedin-link">
+  <a href="https://linkedin.com/in/vsbatth" class="linkedin-link">
     <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
     </svg>
@@ -30,7 +32,11 @@ title: Virinderpal Singh Batth | Data Engineer
 
 ## Professional Summary
 
-Data Engineering leader with 5+ years of experience designing and implementing enterprise-scale data solutions in financial services and insurance. Proven track record of driving significant performance optimizations, pioneering cloud and real-time streaming technologies, and leading cross-functional teams. Expert in Snowflake, AWS, Hadoop, and modern data stack technologies including dbt, Kafka, and PySpark.
+Data Engineering leader with 5+ years building enterprise data solutions in financial services and insurance. Currently leading a team architecting unified data stores and real-time API pipelines for insurance clients. Skilled in Snowflake, dbt, AWS, and Kafka, with a track record of delivering 95% compute reductions, 2TB+ migrations, and real-time streaming architectures.
+
+</div>
+
+<div class="card" markdown="1">
 
 ## Experience
 
@@ -38,9 +44,14 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 
 <p class="job-header"><span><strong>evolv Consulting</strong></span><span>Oct 2025 – Present</span></p>
 
-- Leading a team of 4 data engineers to architect an insurance client's first unified operational data store in Snowflake using dbt
-- Navigating complex ambiguities across legacy data platforms from multiple sub-companies to identify data overlaps and establish master data definitions
+- Leading and growing a team of 3+ data engineers to architect an insurance client's first unified operational data store in Snowflake using dbt
+- Defining master data standards across 4+ legacy platforms, resolving data overlaps between sub-companies
 - Architecting high-performance data pipelines serving a transactional Kong API layer for real-time business insights
+- Built reusable dbt framework for automated data extracts to AWS S3, enabling self-service reporting
+
+</div>
+
+<div class="card" markdown="1">
 
 ### Data Engineer | Financial Credit Risk
 
@@ -55,9 +66,13 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 - Architected cross-organizational data lake POC with AWS S3, reducing transfer time by 50%
 - Enhanced PII/PCI/PHI pipeline security with data masking, tokenization, and RBAC
 
-### Software Engineer | ETL & Big Data Consultant
+</div>
 
-<p class="job-header"><span><strong>HCL America Inc.</strong></span><span>Client: USAA | Nov 2017 – Apr 2021</span></p>
+<div class="card" markdown="1">
+
+### Big Data Consultant | USAA
+
+<p class="job-header"><span><strong>HCL America Inc.</strong></span><span>Nov 2017 – Apr 2021</span></p>
 
 - Pioneered the first project at USAA to utilize AWS cloud and real-time streaming (NiFi/Kafka), transforming batch to real-time processing
 - Established AWS S3 to HDFS file transfer routes, enabling cloud-to-on-premise data integration
@@ -67,6 +82,10 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 - Supervised Hadoop projects and mentored colleagues on CI/CD best practices
 - Ensured PII/non-PII compliance with Information Governance standards
 
+</div>
+
+<div class="card" markdown="1">
+
 ## Technical Skills
 
 |Category             |Technologies                                                         |
@@ -75,20 +94,13 @@ Data Engineering leader with 5+ years of experience designing and implementing e
 |**Data Engineering** |dbt, Kafka, Flink, NiFi, Hadoop, IBM DataStage                       |
 |**Cloud & Platforms**|AWS (S3, EC2, Redshift, Lambda, Athena), Snowflake, DB2              |
 |**Data Formats**     |JSON, Parquet, REST APIs                                             |
-|**Visualization**    |Apache Superset, Looker, Tableau                                     |
+|**Visualization**    |Apache Superset                                                      |
 |**Practices**        |CI/CD, Data Governance, RBAC, Data Masking, Tokenization             |
 
 ## Education
 
-**Bachelor of Science in Computer Science**
-Concentration: Big Data & Analytics
-New York Institute of Technology | *Cum Laude*
+**B.S. in Computer Science** | *Cum Laude*<br>
+Big Data & Analytics Concentration<br>
+New York Institute of Technology, New York
 
-## Key Achievements
-
-- 🚀 **First-Mover Innovation** – Delivered USAA's first AWS cloud and real-time streaming project
-- ⚡ **95% Compute Reduction** – Resolved critical Snowflake performance bottleneck
-- 🎯 **90% Query Optimization** – Reduced SCD Type 2 queries from 3 hours to 15 minutes
-- 📈 **30% Engagement Lift** – Led data initiative driving measurable business outcomes
-- 🔄 **2TB+ Migration** – Modernized platform from Hadoop to Snowflake
-- 🛠️ **90% On-Call Reduction** – Implemented automation reducing operational overhead
+</div>
