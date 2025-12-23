@@ -44,10 +44,10 @@ Data Engineering leader with 5+ years building enterprise data solutions in fina
 
 <p class="job-header"><span><strong>evolv Consulting</strong></span><span>Oct 2025 – Present</span></p>
 
-- Leading and growing a data engineering team to architect an insurance client's first unified operational data store in Snowflake using dbt
-- Establishing master data definitions across legacy platforms from multiple sub-companies
+- Leading and growing a team of 3+ data engineers to architect an insurance client's first unified operational data store in Snowflake using dbt
+- Defining master data standards across 4+ legacy platforms, resolving data overlaps between sub-companies
 - Architecting high-performance data pipelines serving a transactional Kong API layer for real-time business insights
-- Delivered 5+ data extracts (csv, json) from Snowflake to AWS S3 buckets using dbt models and post-hooks for reusability
+- Built reusable dbt framework for automated data extracts to AWS S3, enabling self-service reporting
 
 </div>
 

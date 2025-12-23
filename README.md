@@ -2,7 +2,7 @@
 
 A modern, responsive CV/resume website hosted on GitHub Pages with dark mode, mobile card navigation, and print optimization.
 
-**Live site:** [vsbatth6.github.io](https://vsbatth6.github.io)
+**Live site:** [vsbatth.com](https://vsbatth.com)
 
 ## Features
 
