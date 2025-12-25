@@ -625,9 +625,10 @@ h2:last-of-type + ul li {
 
 /* CV/Resume Toggle Button */
 .cv-resume-toggle {
-    position: fixed;
-    top: 10rem;
-    right: 1.5rem;
+    position: fixed !important;
+    top: 10rem !important;
+    right: 1.5rem !important;
+    left: auto !important;
     min-width: 48px;
     height: 48px;
     padding: 0 1rem;
@@ -636,13 +637,13 @@ h2:last-of-type + ul li {
     background-color: var(--bg-color);
     color: var(--primary-color);
     cursor: pointer;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     z-index: 9999;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    text-decoration: none;
+    text-decoration: none !important;
     font-weight: 600;
     font-size: 0.9rem;
     /* Mobile/touch support */
