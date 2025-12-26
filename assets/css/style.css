@@ -1040,10 +1040,6 @@ h2:last-of-type + ul li {
     }
 
     /* Header layout for print: name/role on left, links on right */
-    .card:first-child {
-        position: relative;
-    }
-
     .card h1 {
         text-align: left !important;
         font-size: 20pt;
@@ -1064,13 +1060,20 @@ h2:last-of-type + ul li {
         display: none !important;
     }
 
-    /* Position contact info on the left side */
+    /* Position contact info on the top right for print */
+    .card:first-child,
+    .resume-page {
+        position: relative;
+    }
+
     .contact-info {
-        position: static;
-        text-align: left !important;
-        align-items: flex-start !important;
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        text-align: right !important;
+        align-items: flex-end !important;
         font-size: 10pt;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
         gap: 0.25rem;
     }
 
