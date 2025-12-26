@@ -3,7 +3,7 @@ layout: default
 title: Virinderpal Singh Batth | Resume
 ---
 
-<div class="card resume-page" markdown="1">
+<div class="resume-page" markdown="1">
 
 # Virinderpal Singh Batth
 

@@ -956,6 +956,23 @@ h2:last-of-type + ul li {
 }
 
 /* ===========================
+   Resume Page Styles
+   =========================== */
+
+/* Resume page - single scrollable page, not card-based */
+.resume-page {
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    scroll-snap-align: none !important;
+    position: static !important;
+    overflow: visible !important;
+}
+
+/* ===========================
    Print Styles
    =========================== */
 
