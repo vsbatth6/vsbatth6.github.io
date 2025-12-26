@@ -626,10 +626,10 @@ h2:last-of-type + ul li {
 /* CV/Resume Toggle Button */
 .cv-resume-toggle {
     position: fixed !important;
-    bottom: 1.5rem !important;
+    top: 9.5rem !important;
     right: 1.5rem !important;
     left: auto !important;
-    top: auto !important;
+    bottom: auto !important;
     min-width: 48px !important;
     width: auto !important;
     max-width: none !important;
@@ -785,7 +785,7 @@ h2:last-of-type + ul li {
     }
 
     .cv-resume-toggle {
-        bottom: 0.75rem !important;
+        top: 8rem !important;
         right: 0.75rem !important;
         min-width: 44px !important;
         height: 44px !important;
@@ -820,7 +820,7 @@ h2:last-of-type + ul li {
     }
 
     .cv-resume-toggle {
-        bottom: 0.5rem !important;
+        top: 7.5rem !important;
         right: 0.5rem !important;
         min-width: 40px !important;
         height: 40px !important;
@@ -963,17 +963,27 @@ h2:last-of-type + ul li {
    Resume Page Styles
    =========================== */
 
-/* Resume page - single scrollable page, not card-based */
-.resume-page {
-    width: 100%;
-    max-width: 100%;
-    height: auto !important;
-    min-height: auto !important;
-    padding: 2.5rem !important;
-    margin: 0 !important;
-    scroll-snap-align: none !important;
-    position: static !important;
-    overflow: visible !important;
+/* Resume page - single scrollable page on desktop, card-based on mobile */
+@media screen and (min-width: 769px) {
+    .resume-page {
+        width: 100%;
+        max-width: 100%;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 2.5rem !important;
+        margin: 0 !important;
+        scroll-snap-align: none !important;
+        position: static !important;
+        overflow: visible !important;
+    }
+
+    .resume-page .card {
+        scroll-snap-align: none !important;
+        min-height: auto !important;
+        height: auto !important;
+        padding: 1.5rem 0 !important;
+        margin-bottom: 1.5rem;
+    }
 }
 
 /* ===========================
