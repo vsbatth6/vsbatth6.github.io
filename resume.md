@@ -5,6 +5,8 @@ title: Virinderpal Singh Batth | Resume
 
 <div class="resume-page" markdown="1">
 
+<div class="card" markdown="1">
+
 # Virinderpal Singh Batth
 
 **Data Engineer Resume**
@@ -41,6 +43,12 @@ title: Virinderpal Singh Batth | Resume
 - Architecting high-performance data pipelines serving a transactional Kong API layer for real-time business insights
 - Built reusable dbt framework for automated data extracts to AWS S3, enabling self-service reporting
 
+</div>
+
+<div class="card" markdown="1">
+
+## Experience (continued)
+
 ### Data Engineer | Financial Credit Risk
 
 <p class="job-header"><span><strong>USAA</strong></span><span>Apr 2021 – Oct 2025</span></p>
@@ -53,16 +61,28 @@ title: Virinderpal Singh Batth | Resume
 - Implemented decoupled-push architecture reducing On-Call overhead by **90%**
 - Enhanced PII/PCI/PHI pipeline security with data masking, tokenization, and RBAC
 
+</div>
+
+<div class="card" markdown="1">
+
 ## Technical Skills
 
-**Programming:** Python (PySpark, Pandas, Polars, SQLAlchemy, FastAPI), SQL, Bash, Git
-**Data Engineering:** dbt, Kafka, Flink, NiFi, Hadoop, Snowflake, IBM DataStage
-**Cloud & Platforms:** AWS (S3, EC2, Redshift, Lambda, Athena), DB2
-**Practices:** CI/CD, Data Governance, RBAC, Data Masking, Tokenization
+<div class="skills-grid">
+
+| Category | Skills |
+|----------|--------|
+| **Programming** | Python (PySpark, Pandas, Polars, SQLAlchemy, FastAPI), SQL, Bash, Git |
+| **Data Engineering** | dbt, Kafka, Flink, NiFi, Hadoop, Snowflake, IBM DataStage |
+| **Cloud & Platforms** | AWS (S3, EC2, Redshift, Lambda, Athena), DB2 |
+| **Practices** | CI/CD, Data Governance, RBAC, Data Masking, Tokenization |
+
+</div>
 
 ## Education
 
 **B.S. in Computer Science** | *Cum Laude* | Big Data & Analytics Concentration
 New York Institute of Technology, New York
+
+</div>
 
 </div>

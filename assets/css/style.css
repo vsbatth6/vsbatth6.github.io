@@ -501,7 +501,7 @@ h2:last-of-type + ul li {
 /* Theme toggle button */
 .theme-toggle {
     position: fixed;
-    bottom: 10.5rem;
+    top: 1.5rem;
     right: 1.5rem;
     width: 48px;
     height: 48px;
@@ -583,7 +583,7 @@ h2:last-of-type + ul li {
 /* Print button */
 .print-button {
     position: fixed;
-    bottom: 6rem;
+    top: 5.5rem;
     right: 1.5rem;
     width: 48px;
     height: 48px;
@@ -626,10 +626,10 @@ h2:last-of-type + ul li {
 /* CV/Resume Toggle Button */
 .cv-resume-toggle {
     position: fixed !important;
-    bottom: 1.5rem !important;
+    top: 9.5rem !important;
     right: 1.5rem !important;
     left: auto !important;
-    top: auto !important;
+    bottom: auto !important;
     min-width: 48px !important;
     width: auto !important;
     max-width: none !important;
@@ -855,7 +855,7 @@ h2:last-of-type + ul li {
         min-height: 100vh;
         padding: 1.5rem;
         padding-top: 4rem; /* Space for fixed buttons */
-        padding-bottom: 3rem; /* Space for peek + dots */
+        padding-bottom: 10rem; /* Space for peek + dots + bottom buttons */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -963,17 +963,54 @@ h2:last-of-type + ul li {
    Resume Page Styles
    =========================== */
 
-/* Resume page - single scrollable page, not card-based */
-.resume-page {
+/* Resume page - single scrollable page on desktop, card-based on mobile */
+@media screen and (min-width: 769px) {
+    .resume-page {
+        width: 100%;
+        max-width: 100%;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 2.5rem !important;
+        margin: 0 !important;
+        scroll-snap-align: none !important;
+        position: static !important;
+        overflow: visible !important;
+    }
+
+    .resume-page .card {
+        scroll-snap-align: none !important;
+        min-height: auto !important;
+        height: auto !important;
+        padding: 1.5rem 0 !important;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Skills grid table styling */
+.skills-grid table {
     width: 100%;
-    max-width: 100%;
-    height: auto !important;
-    min-height: auto !important;
-    padding: 2.5rem !important;
-    margin: 0 !important;
-    scroll-snap-align: none !important;
-    position: static !important;
-    overflow: visible !important;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.skills-grid th {
+    text-align: left;
+    font-weight: 600;
+    padding: 0.75rem;
+    background-color: var(--section-bg);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.skills-grid td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+
+.skills-grid td:first-child {
+    font-weight: 600;
+    color: var(--secondary-color);
+    width: 180px;
 }
 
 /* ===========================
