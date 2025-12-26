@@ -54,11 +54,16 @@
         </svg>
     </button>
 
-    <!-- PDF Download Link -->
-    <a href="{{ '/assets/virinderpal_batth_CV_data_engineer.pdf' | relative_url }}" class="pdf-download" download="virinderpal_batth_CV_data_engineer.pdf" aria-label="Download CV as PDF">
+    <!-- Print Button -->
+    <button class="print-button" id="print-button" aria-label="Print page">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z"/>
+            <path fill-rule="evenodd" d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z" clip-rule="evenodd"/>
         </svg>
+    </button>
+
+    <!-- CV/Resume Toggle Button -->
+    <a href="{% if page.url == '/resume' or page.url == '/resume/' %}/{% else %}/resume{% endif %}" class="cv-resume-toggle" aria-label="{% if page.url == '/resume' or page.url == '/resume/' %}View Full CV{% else %}View Resume{% endif %}">
+        <span class="toggle-text">{% if page.url == '/resume' or page.url == '/resume/' %}CV{% else %}Resume{% endif %}</span>
     </a>
 
     <div class="container">
@@ -83,11 +88,19 @@
         .container { max-width: 100%; padding: 0; }
     </style>
 
-    <!-- Theme Toggle Script -->
+    <!-- Theme Toggle and Print Script -->
     <script>
         (function() {
             const toggle = document.getElementById('theme-toggle');
+            const printButton = document.getElementById('print-button');
             const root = document.documentElement;
+
+            // Print button handler
+            if (printButton) {
+                printButton.addEventListener('click', function() {
+                    window.print();
+                });
+            }
 
             // Determine current effective theme
             function getEffectiveTheme() {

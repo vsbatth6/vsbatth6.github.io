@@ -255,14 +255,14 @@ h3 {
 
 .content > h1:first-child,
 .card:first-child h1 {
-    text-align: center;
+    text-align: left;
     color: var(--primary-color);
     margin-bottom: 0.25rem;
 }
 
 .content > p:first-of-type,
 .card:first-child > p:first-of-type {
-    text-align: center;
+    text-align: left;
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--secondary-color);
@@ -271,15 +271,15 @@ h3 {
 
 /* Contact Info Styles */
 .contact-info {
-    text-align: center;
+    text-align: left;
     color: var(--text-light);
     margin-bottom: 2rem;
     font-size: 1.3rem;
     line-height: 1.8;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 0.5rem;
 }
 
@@ -501,7 +501,7 @@ h2:last-of-type + ul li {
 /* Theme toggle button */
 .theme-toggle {
     position: fixed;
-    top: 1.5rem;
+    bottom: 10.5rem;
     right: 1.5rem;
     width: 48px;
     height: 48px;
@@ -580,10 +580,10 @@ h2:last-of-type + ul li {
     }
 }
 
-/* PDF Download button */
-.pdf-download {
+/* Print button */
+.print-button {
     position: fixed;
-    top: 5.5rem;
+    bottom: 6rem;
     right: 1.5rem;
     width: 48px;
     height: 48px;
@@ -603,10 +603,9 @@ h2:last-of-type + ul li {
     touch-action: manipulation;
     user-select: none;
     -webkit-user-select: none;
-    text-decoration: none;
 }
 
-.pdf-download:hover {
+.print-button:hover {
     background-color: var(--secondary-color);
     color: var(--bg-color);
     border-color: var(--secondary-color);
@@ -614,14 +613,65 @@ h2:last-of-type + ul li {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.pdf-download:active {
+.print-button:active {
     transform: scale(0.95);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.pdf-download svg {
+.print-button svg {
     width: 20px;
     height: 20px;
+}
+
+/* CV/Resume Toggle Button */
+.cv-resume-toggle {
+    position: fixed !important;
+    bottom: 1.5rem !important;
+    right: 1.5rem !important;
+    left: auto !important;
+    top: auto !important;
+    min-width: 48px !important;
+    width: auto !important;
+    max-width: none !important;
+    height: 48px !important;
+    padding: 0 1rem !important;
+    margin: 0 !important;
+    border-radius: 24px !important;
+    border: 2px solid var(--primary-color) !important;
+    background-color: var(--bg-color) !important;
+    color: var(--primary-color) !important;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease;
+    z-index: 9999 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    /* Mobile/touch support */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.cv-resume-toggle:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cv-resume-toggle:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-text {
+    white-space: nowrap;
 }
 
 /* ===========================
@@ -636,6 +686,10 @@ h2:last-of-type + ul li {
 
     .content {
         padding: 1.5rem;
+    }
+
+    .resume-page {
+        padding: 1.5rem !important;
     }
 
     h1 {
@@ -707,7 +761,7 @@ h2:last-of-type + ul li {
 /* Responsive button positioning */
 @media screen and (max-width: 768px) {
     .theme-toggle {
-        top: 0.75rem;
+        bottom: 9rem;
         right: 0.75rem;
         width: 44px;
         height: 44px;
@@ -718,23 +772,31 @@ h2:last-of-type + ul li {
         height: 20px;
     }
 
-    .pdf-download {
-        top: 4.25rem;
+    .print-button {
+        bottom: 5rem;
         right: 0.75rem;
         width: 44px;
         height: 44px;
     }
 
-    .pdf-download svg {
+    .print-button svg {
         width: 20px;
         height: 20px;
+    }
+
+    .cv-resume-toggle {
+        bottom: 0.75rem !important;
+        right: 0.75rem !important;
+        min-width: 44px !important;
+        height: 44px !important;
+        font-size: 0.85rem !important;
     }
 }
 
 /* Extra small screens */
 @media screen and (max-width: 380px) {
     .theme-toggle {
-        top: 0.5rem;
+        bottom: 8.5rem;
         right: 0.5rem;
         width: 40px;
         height: 40px;
@@ -745,16 +807,25 @@ h2:last-of-type + ul li {
         height: 18px;
     }
 
-    .pdf-download {
-        top: 3.75rem;
+    .print-button {
+        bottom: 4.5rem;
         right: 0.5rem;
         width: 40px;
         height: 40px;
     }
 
-    .pdf-download svg {
+    .print-button svg {
         width: 18px;
         height: 18px;
+    }
+
+    .cv-resume-toggle {
+        bottom: 0.5rem !important;
+        right: 0.5rem !important;
+        min-width: 40px !important;
+        height: 40px !important;
+        font-size: 0.75rem !important;
+        padding: 0 0.75rem !important;
     }
 }
 
@@ -889,6 +960,23 @@ h2:last-of-type + ul li {
 }
 
 /* ===========================
+   Resume Page Styles
+   =========================== */
+
+/* Resume page - single scrollable page, not card-based */
+.resume-page {
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 2.5rem !important;
+    margin: 0 !important;
+    scroll-snap-align: none !important;
+    position: static !important;
+    overflow: visible !important;
+}
+
+/* ===========================
    Print Styles
    =========================== */
 
@@ -952,10 +1040,6 @@ h2:last-of-type + ul li {
     }
 
     /* Header layout for print: name/role on left, links on right */
-    .card:first-child {
-        position: relative;
-    }
-
     .card h1 {
         text-align: left !important;
         font-size: 20pt;
@@ -971,11 +1055,21 @@ h2:last-of-type + ul li {
         margin-bottom: 1rem;
     }
 
-    /* Position contact info on the right side */
+    /* Hide "Data Engineer Resume" subtitle when printing resume */
+    .resume-page > p:first-of-type {
+        display: none !important;
+    }
+
+    /* Position contact info on the top right for print */
+    .card:first-child,
+    .resume-page {
+        position: relative;
+    }
+
     .contact-info {
-        position: absolute;
-        top: 0;
-        right: 0;
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
         text-align: right !important;
         align-items: flex-end !important;
         font-size: 10pt;
@@ -1082,8 +1176,42 @@ h2:last-of-type + ul li {
 
     /* Hide buttons in print */
     .theme-toggle,
-    .pdf-download {
+    .print-button,
+    .cv-resume-toggle {
         display: none !important;
+    }
+
+    /* Resume-specific print optimizations */
+    .resume-page h2 {
+        font-size: 13pt;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .resume-page h3 {
+        font-size: 11pt;
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .resume-page .job-header {
+        margin-bottom: 0.25rem;
+    }
+
+    .resume-page li {
+        margin-bottom: 0.15rem;
+        line-height: 1.3;
+    }
+
+    .resume-page ul {
+        margin-top: 0.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Compact technical skills on resume */
+    .resume-page p {
+        margin-bottom: 0.25rem;
+        line-height: 1.4;
     }
 }
 
