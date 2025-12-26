@@ -688,6 +688,10 @@ h2:last-of-type + ul li {
         padding: 1.5rem;
     }
 
+    .resume-page {
+        padding: 1.5rem !important;
+    }
+
     h1 {
         font-size: 2rem;
     }
