@@ -7,7 +7,7 @@ title: Virinderpal Singh Batth | Resume
 
 # Virinderpal Singh Batth
 
-**Resume**
+**Data Engineer Resume**
 
 <div class="contact-info">
   <a href="https://linkedin.com/in/vsbatth" class="linkedin-link">
