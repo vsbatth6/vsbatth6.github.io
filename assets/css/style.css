@@ -501,7 +501,7 @@ h2:last-of-type + ul li {
 /* Theme toggle button */
 .theme-toggle {
     position: fixed;
-    top: 1.5rem;
+    bottom: 6rem;
     right: 1.5rem;
     width: 48px;
     height: 48px;
@@ -707,7 +707,7 @@ h2:last-of-type + ul li {
 /* Responsive button positioning */
 @media screen and (max-width: 768px) {
     .theme-toggle {
-        top: 0.75rem;
+        bottom: 5rem;
         right: 0.75rem;
         width: 44px;
         height: 44px;
@@ -734,7 +734,7 @@ h2:last-of-type + ul li {
 /* Extra small screens */
 @media screen and (max-width: 380px) {
     .theme-toggle {
-        top: 0.5rem;
+        bottom: 4.5rem;
         right: 0.5rem;
         width: 40px;
         height: 40px;
