@@ -1,0 +1,1267 @@
+/* ===========================
+   CSS Reset & Base Styles
+   =========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   COLOR SCHEMES
+
+   Each theme includes both LIGHT and DARK modes grouped together.
+   To switch themes: comment out the active theme and uncomment your preferred one.
+   =========================== */
+
+/* ----------------------------------------
+   FOREST GREEN - Currently Active
+   ---------------------------------------- */
+
+/* Light Mode */
+:root {
+    --primary-color: #1a4d2e;
+    --secondary-color: #27ae60;
+    --accent-color: #229954;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #d5e8d4;
+    --bg-color: #ffffff;
+    --section-bg: #f1f8f4;
+    --link-color: #27ae60;
+    --link-hover: #1e8449;
+    --shadow: 0 2px 8px rgba(26, 77, 46, 0.08);
+}
+
+/* Dark Mode - Manual toggle */
+:root[data-theme="dark"] {
+    --primary-color: #7cb587;
+    --secondary-color: #5a9a6e;
+    --accent-color: #4a8a5e;
+    --text-color: #cbd5e1;
+    --text-light: #8b95a5;
+    --border-color: #2d3a4a;
+    --bg-color: #121a24;
+    --section-bg: #1a242f;
+    --link-color: #7cb587;
+    --link-hover: #9ac9a3;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark Mode - Auto (system preference) */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #7cb587;
+        --secondary-color: #5a9a6e;
+        --accent-color: #4a8a5e;
+        --text-color: #cbd5e1;
+        --text-light: #8b95a5;
+        --border-color: #2d3a4a;
+        --bg-color: #121a24;
+        --section-bg: #1a242f;
+        --link-color: #7cb587;
+        --link-hover: #9ac9a3;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* ----------------------------------------
+   WARM CHARCOAL - Minimalist & Modern
+   ----------------------------------------
+
+:root {
+    --primary-color: #2d2d2d;
+    --secondary-color: #4a4a4a;
+    --accent-color: #ff6b6b;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #e0e0e0;
+    --bg-color: #ffffff;
+    --section-bg: #f5f5f5;
+    --link-color: #4a4a4a;
+    --link-hover: #2d2d2d;
+    --shadow: 0 2px 8px rgba(45, 45, 45, 0.08);
+}
+
+:root[data-theme="dark"] {
+    --primary-color: #a0a0a0;
+    --secondary-color: #808080;
+    --accent-color: #ff8a8a;
+    --text-color: #e0e0e0;
+    --text-light: #999999;
+    --border-color: #3a3a3a;
+    --bg-color: #1a1a1a;
+    --section-bg: #252525;
+    --link-color: #b0b0b0;
+    --link-hover: #ff8a8a;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #a0a0a0;
+        --secondary-color: #808080;
+        --accent-color: #ff8a8a;
+        --text-color: #e0e0e0;
+        --text-light: #999999;
+        --border-color: #3a3a3a;
+        --bg-color: #1a1a1a;
+        --section-bg: #252525;
+        --link-color: #b0b0b0;
+        --link-hover: #ff8a8a;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+}
+
+*/
+
+/* ----------------------------------------
+   OTHER THEMES (Light mode only, no dark mode defined)
+   ---------------------------------------- */
+
+/* PROFESSIONAL BLUE
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #ddd;
+    --bg-color: #ffffff;
+    --section-bg: #f8f9fa;
+    --link-color: #3498db;
+    --link-hover: #2980b9;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+*/
+
+/* ELEGANT PURPLE
+:root {
+    --primary-color: #4a148c;
+    --secondary-color: #7b1fa2;
+    --accent-color: #9c27b0;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #e1d5e7;
+    --bg-color: #ffffff;
+    --section-bg: #f3e5f5;
+    --link-color: #7b1fa2;
+    --link-hover: #6a1b9a;
+    --shadow: 0 2px 8px rgba(74, 20, 140, 0.08);
+}
+*/
+
+/* MIDNIGHT BLUE
+:root {
+    --primary-color: #0d1b2a;
+    --secondary-color: #1b4965;
+    --accent-color: #62b6cb;
+    --text-color: #2d3748;
+    --text-light: #666;
+    --border-color: #cfe2f3;
+    --bg-color: #ffffff;
+    --section-bg: #f0f4f8;
+    --link-color: #1b4965;
+    --link-hover: #0d1b2a;
+    --shadow: 0 2px 8px rgba(13, 27, 42, 0.1);
+}
+*/
+
+/* ===========================
+   Dark Mode Specific Overrides
+   =========================== */
+
+:root[data-theme="dark"] .content,
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .content {
+        border: 1px solid var(--border-color);
+    }
+}
+
+/* Table header in dark mode */
+:root[data-theme="dark"] thead {
+    background-color: #1e2f28;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) thead {
+        background-color: #1e2f28;
+    }
+}
+
+/* ===========================
+   Typography
+   =========================== */
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+h3 {
+    font-size: 1.35rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* ===========================
+   Layout
+   =========================== */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.content {
+    background: var(--bg-color);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* ===========================
+   Header Styles
+   =========================== */
+
+.content > h1:first-child,
+.card:first-child h1 {
+    text-align: left;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.content > p:first-of-type,
+.card:first-child > p:first-of-type {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    text-align: left;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.linkedin-link,
+.github-link,
+.website-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: opacity 0.2s ease;
+}
+
+.linkedin-link:hover,
+.github-link:hover,
+.website-link:hover {
+    opacity: 0.8;
+}
+
+.linkedin-icon,
+.github-icon,
+.website-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ===========================
+   Links
+   =========================== */
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* ===========================
+   Horizontal Rules
+   =========================== */
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0;
+}
+
+/* ===========================
+   Lists & Content
+   =========================== */
+
+ul {
+    margin-left: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+
+li strong {
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Ensure body paragraphs (after section headers) are left-aligned */
+h2 + p {
+    text-align: left !important;
+}
+
+strong {
+    font-weight: 600;
+}
+
+/* ===========================
+   Experience Section
+   =========================== */
+
+.job-header {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    background-color: var(--section-bg);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    border: 1.5px solid transparent;
+    box-shadow: 0 3px 10px rgba(39, 174, 96, 0.35);
+}
+
+.job-header strong {
+    font-size: 1.05rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Fallback for any h3 + p not using job-header class */
+h3 + p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+/* ===========================
+   Tables (Technical Skills)
+   =========================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:hover {
+    background-color: var(--section-bg);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* ===========================
+   Key Achievements Section
+   =========================== */
+
+h2:last-of-type + ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+h2:last-of-type + ul li {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    background-color: var(--section-bg);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect only for devices that support hover (desktop) */
+@media (hover: hover) and (pointer: fine) {
+    h2:last-of-type + ul li:hover {
+        background-color: var(--border-color);
+        border-left-color: var(--primary-color);
+        transform: translateX(5px);
+    }
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+.print-instruction {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+/* ===========================
+   Floating Buttons
+   =========================== */
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    bottom: 10.5rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: pulse-once 2s ease-in-out;
+    /* Mobile/touch support */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+@keyframes pulse-once {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.theme-toggle:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Active state for touch feedback */
+.theme-toggle:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(15deg);
+}
+
+/* Sun icon (shown in dark mode) */
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+/* Moon icon (shown in light mode) */
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle .sun-icon {
+    display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle .moon-icon {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .sun-icon {
+        display: block;
+    }
+    :root:not([data-theme="light"]) .theme-toggle .moon-icon {
+        display: none;
+    }
+}
+
+/* Print button */
+.print-button {
+    position: fixed;
+    bottom: 6rem;
+    right: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    /* Mobile/touch support */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.print-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.print-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.print-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* CV/Resume Toggle Button */
+.cv-resume-toggle {
+    position: fixed !important;
+    top: auto !important;
+    right: 1.5rem !important;
+    left: auto !important;
+    bottom: 1.5rem !important;
+    min-width: 48px !important;
+    width: auto !important;
+    max-width: none !important;
+    height: 48px !important;
+    padding: 0 1rem !important;
+    margin: 0 !important;
+    border-radius: 24px !important;
+    border: 2px solid var(--primary-color) !important;
+    background-color: var(--bg-color) !important;
+    color: var(--primary-color) !important;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease;
+    z-index: 9999 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    /* Mobile/touch support */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.cv-resume-toggle:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cv-resume-toggle:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-text {
+    white-space: nowrap;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+/* Tablet and mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    .resume-page {
+        padding: 1.5rem !important;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 0.75rem;
+    }
+
+    /* Reduce icon size on tablets/mobile */
+    .linkedin-icon,
+    .github-icon,
+    .website-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+    }
+
+    /* Keep contact info on one line on mobile */
+    .contact-info {
+        font-size: 1.1rem;
+        gap: 0.4rem;
+    }
+
+    /* Further reduce icons on small phones */
+    .linkedin-icon,
+    .github-icon,
+    .website-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Responsive button positioning */
+@media screen and (max-width: 768px) {
+    .theme-toggle {
+        bottom: 9rem;
+        right: 0.75rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    .theme-toggle svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .print-button {
+        bottom: 5rem;
+        right: 0.75rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    .print-button svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .cv-resume-toggle {
+        top: auto !important;
+        bottom: 1.5rem !important;
+        right: 0.75rem !important;
+        min-width: 44px !important;
+        height: 44px !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 380px) {
+    .theme-toggle {
+        bottom: 8.5rem;
+        right: 0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .theme-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .print-button {
+        bottom: 4.5rem;
+        right: 0.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .print-button svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .cv-resume-toggle {
+        top: auto !important;
+        bottom: 1rem !important;
+        right: 0.5rem !important;
+        min-width: 40px !important;
+        height: 40px !important;
+        font-size: 0.75rem !important;
+        padding: 0 0.75rem !important;
+    }
+}
+
+/* ===========================
+   Mobile Card Swipe UI
+   =========================== */
+
+/* Navigation dots container (default hidden) */
+.card-nav {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    /* Card container - full viewport scroll snap */
+    .content {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        padding: 0;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Individual cards */
+    .card {
+        scroll-snap-align: start;
+        min-height: 100vh;
+        padding: 1.5rem;
+        padding-top: 4rem; /* Space for fixed buttons */
+        padding-bottom: 3rem; /* Space for peek + dots */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        position: relative;
+        background: var(--bg-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    /* Remove default margins in card mode */
+    .card h1,
+    .card h2,
+    .card h3 {
+        margin-top: 0;
+    }
+
+    .card h2 {
+        border-bottom: 2px solid var(--secondary-color);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Container adjustments for card mode */
+    .container {
+        padding: 0;
+        max-width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Hide footer in card mode */
+    .footer {
+        display: none;
+    }
+
+    /* Peek indicator - shows there's more content */
+    .card::after {
+        content: '';
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 4px;
+        background: var(--border-color);
+        border-radius: 2px;
+        opacity: 0.6;
+    }
+
+    /* Last card doesn't need peek indicator */
+    .card:last-child::after {
+        display: none;
+    }
+
+    /* Table responsive in cards */
+    .card table {
+        font-size: 0.75rem;
+    }
+
+    .card th,
+    .card td {
+        padding: 0.5rem;
+    }
+
+    /* Contact info adjustments */
+    .card .contact-info {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Navigation dots */
+    .card-nav {
+        display: flex;
+        position: fixed;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        flex-direction: column;
+        gap: 0.5rem;
+        z-index: 9998;
+    }
+
+    .card-nav-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--border-color);
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        padding: 0;
+    }
+
+    .card-nav-dot:hover {
+        background: var(--secondary-color);
+        transform: scale(1.3);
+    }
+
+    .card-nav-dot.active {
+        background: var(--secondary-color);
+        transform: scale(1.3);
+    }
+}
+
+/* ===========================
+   Resume Page Styles
+   =========================== */
+
+/* Resume page - single scrollable page on desktop, card-based on mobile */
+@media screen and (min-width: 769px) {
+    .resume-page {
+        width: 100%;
+        max-width: 100%;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        scroll-snap-align: none !important;
+        position: static !important;
+        overflow: visible !important;
+    }
+
+    .resume-page .card {
+        scroll-snap-align: none !important;
+        min-height: auto !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin-bottom: 0;
+    }
+}
+
+/* Resume page mobile styles */
+@media screen and (max-width: 768px) {
+    .resume-page {
+        padding: 0 !important;
+    }
+
+    .resume-page .card {
+        justify-content: flex-start;
+        padding: 1.5rem;
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* ===========================
+   Print Styles
+   =========================== */
+
+@media print {
+    @page {
+        margin: 0.2in 0.5in;
+    }
+
+    body {
+        font-size: 11pt;
+        line-height: 1.3;
+        color: #000;
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        overflow: visible;
+    }
+
+    .content {
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        /* Reset mobile card scroll styles */
+        scroll-snap-type: none;
+        overflow: visible;
+        height: auto;
+    }
+
+    /* Reset card styles for print */
+    .card {
+        scroll-snap-align: none;
+        min-height: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        display: block;
+        position: static;
+        background: transparent;
+        border-bottom: none;
+    }
+
+    /* Reset resume-page wrapper for print */
+    .resume-page {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100%;
+    }
+
+    .resume-page .card {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .card::after {
+        display: none;
+    }
+
+    /* Hide card navigation dots */
+    .card-nav {
+        display: none !important;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    /* Ensure all text is black for print */
+    h1, h2, h3, h4, h5, h6, p, li, td, th, strong {
+        color: #000 !important;
+    }
+
+    /* Header layout for print: name/role on left, links on right */
+    .card h1 {
+        text-align: left !important;
+        font-size: 18pt;
+        color: #000 !important;
+        margin-top: 0;
+        margin-bottom: 0.25rem;
+    }
+
+    .content > p:first-of-type,
+    .card:first-child > p:first-of-type {
+        text-align: left !important;
+        font-size: 14pt;
+        color: #000 !important;
+        margin-bottom: 1rem;
+    }
+
+    /* Hide "Data Engineer Resume" subtitle when printing resume */
+    .resume-page > p:first-of-type {
+        display: none !important;
+    }
+
+    /* Position contact info on the top right for print */
+    .card:first-child,
+    .resume-page {
+        position: relative;
+    }
+
+    .contact-info {
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        text-align: right !important;
+        align-items: flex-end !important;
+        font-size: 10pt;
+        margin-bottom: 0;
+        gap: 0.25rem;
+    }
+
+    /* Show full URLs in print */
+    .linkedin-link::after {
+        content: " linkedin.com/in/vbatth";
+        margin-left: 0.25rem;
+    }
+
+    .github-link::after {
+        content: " github.com/vsbatth6";
+        margin-left: 0.25rem;
+    }
+
+    .website-link::after {
+        content: " vsbatth.com";
+        margin-left: 0.25rem;
+    }
+
+    /* Hide link text, show only icon + URL */
+    .linkedin-link,
+    .github-link,
+    .website-link {
+        color: #000;
+        font-size: 0;
+    }
+
+    .linkedin-link::after,
+    .github-link::after,
+    .website-link::after {
+        font-size: 10pt;
+    }
+
+    h2 {
+        font-size: 13pt;
+        page-break-after: avoid;
+        color: #000;
+        border-bottom: 2px solid #000;
+        margin-top: 0.5rem;
+        margin-bottom: 0.4rem;
+    }
+
+    /* Reduce space before Technical Skills and Education sections */
+    ul + h2,
+    table + h2,
+    p + h2 {
+        margin-top: 0.5rem;
+    }
+
+    h3 {
+        font-size: 11pt;
+        page-break-after: avoid;
+        color: #000;
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    li {
+        page-break-inside: avoid;
+        line-height: 1.3;
+        margin-bottom: 0.2rem;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    table {
+        box-shadow: none;
+    }
+
+    td {
+        border-bottom: 1px solid #ccc;
+    }
+
+    tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Override company name boxes to black and white */
+    .job-header {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        color: #000;
+        padding: 0;
+    }
+
+    .job-header strong {
+        color: #000;
+        font-size: 11pt;
+    }
+
+    /* Override table colors for print */
+    thead {
+        background-color: #000;
+        color: white;
+    }
+
+    td strong {
+        color: #000;
+    }
+
+    /* Override Key Achievements borders to black */
+    h2:last-of-type + ul li {
+        background-color: #f5f5f5;
+        border-left: 4px solid #000;
+    }
+
+    /* Override Key Achievements bold text to black */
+    h2:last-of-type + ul li strong {
+        color: #000 !important;
+    }
+
+    /* LinkedIn icon in print */
+    .linkedin-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Hide buttons in print */
+    .theme-toggle,
+    .print-button,
+    .cv-resume-toggle {
+        display: none !important;
+    }
+}
+
+/* ===========================
+   Accessibility
+   =========================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}

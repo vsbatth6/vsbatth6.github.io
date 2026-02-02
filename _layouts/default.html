@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.author }}">
+    <title>{{ page.title | default: site.title }}</title>
+
+    <!-- SEO and Social Media Meta Tags -->
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ '/assets/og-image.svg' | absolute_url }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="{{ '/assets/og-image.svg' | absolute_url }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Theme initialization (prevents flash of wrong theme) -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <!-- Moon icon (shown in light mode) -->
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
+        </svg>
+        <!-- Sun icon (shown in dark mode) -->
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/>
+        </svg>
+    </button>
+
+    <!-- Print Button -->
+    <button class="print-button" id="print-button" aria-label="Print page">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z" clip-rule="evenodd"/>
+        </svg>
+    </button>
+
+    <!-- CV/Resume Toggle Button -->
+    <a href="{% if page.url == '/resume' or page.url == '/resume/' %}/{% else %}/resume{% endif %}" class="cv-resume-toggle" aria-label="{% if page.url == '/resume' or page.url == '/resume/' %}View Full CV{% else %}View Resume{% endif %}">
+        <span class="toggle-text">{% if page.url == '/resume' or page.url == '/resume/' %}CV{% else %}Resume{% endif %}</span>
+    </a>
+
+    <div class="container">
+        <main class="content">
+            {{ content }}
+        </main>
+
+        <footer class="footer">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
+            <p class="print-instruction">💡 For best print results, use your browser's print function (Ctrl+P or Cmd+P)</p>
+        </footer>
+    </div>
+
+    <!-- Card Navigation Dots (mobile only) -->
+    <nav class="card-nav" id="card-nav" aria-label="Card navigation"></nav>
+
+    <!-- Print Styles -->
+    <style media="print">
+        .footer { display: none; }
+        .print-instruction { display: none; }
+        body { font-size: 11pt; }
+        .container { max-width: 100%; padding: 0; }
+    </style>
+
+    <!-- Theme Toggle and Print Script -->
+    <script>
+        (function() {
+            const toggle = document.getElementById('theme-toggle');
+            const printButton = document.getElementById('print-button');
+            const root = document.documentElement;
+
+            // Print button handler
+            if (printButton) {
+                printButton.addEventListener('click', function() {
+                    window.print();
+                });
+            }
+
+            // Determine current effective theme
+            function getEffectiveTheme() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) return savedTheme;
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            // Toggle theme
+            function toggleTheme() {
+                const currentTheme = getEffectiveTheme();
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+                root.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+            }
+
+            // Listen for toggle button click
+            toggle.addEventListener('click', toggleTheme);
+
+            // Listen for system preference changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                // Only respond if user hasn't set a manual preference
+                if (!localStorage.getItem('theme')) {
+                    // CSS handles this automatically, but we can trigger any JS-dependent updates here
+                }
+            });
+
+            // Card Navigation (mobile only)
+            function initCardNav() {
+                const content = document.querySelector('.content');
+                const cards = document.querySelectorAll('.card');
+                const nav = document.getElementById('card-nav');
+
+                if (!content || cards.length === 0 || !nav) return;
+
+                // Only init on mobile
+                if (window.innerWidth > 768) {
+                    nav.innerHTML = '';
+                    return;
+                }
+
+                // Create dots
+                nav.innerHTML = '';
+                cards.forEach((card, index) => {
+                    const dot = document.createElement('button');
+                    dot.className = 'card-nav-dot' + (index === 0 ? ' active' : '');
+                    dot.setAttribute('aria-label', 'Go to section ' + (index + 1));
+                    dot.addEventListener('click', () => {
+                        card.scrollIntoView({ behavior: 'smooth' });
+                    });
+                    nav.appendChild(dot);
+                });
+
+                // Track scroll position and update active dot
+                const dots = nav.querySelectorAll('.card-nav-dot');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                            const index = Array.from(cards).indexOf(entry.target);
+                            dots.forEach((dot, i) => {
+                                dot.classList.toggle('active', i === index);
+                            });
+                        }
+                    });
+                }, {
+                    root: content,
+                    threshold: 0.5
+                });
+
+                cards.forEach(card => observer.observe(card));
+            }
+
+            // Init on load and resize
+            initCardNav();
+            window.addEventListener('resize', initCardNav);
+        })();
+    </script>
+</body>
+</html>
