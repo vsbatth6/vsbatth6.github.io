@@ -22,6 +22,7 @@
 ### Layout & Styling
 - **Smooth scrolling** - `scroll-behavior: smooth` on html
 - **Print layout** - Full print stylesheet: black/white colors, contact info repositioned top-right, URLs revealed, buttons hidden, page-break rules
+- **Resume single-page fit** - Reduced print body font-size to 10.5pt, fixed subtitle margin leak (`1rem` → `0.25rem`), added missing `p` and `ul` print margin overrides (`0.25rem`), removed redundant `<style media="print">` block in `default.html` that was silently overriding the `style.css` font-size due to source order
 - **Dark mode** - Manual toggle + system preference auto-detect, persisted to localStorage
 - **Responsive typography** - Scaled headings and spacing at 768px and 480px breakpoints
 
