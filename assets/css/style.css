@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+/* Add smooth scrolling for entire page */
+html {
+    scroll-behavior: smooth;
+}
+
 /* ===========================
    COLOR SCHEMES
 
@@ -681,7 +686,7 @@ h2:last-of-type + ul li {
 /* Tablet and mobile */
 @media (max-width: 768px) {
     .container {
-        padding: 1.5rem 1rem;
+        padding: 1.25rem 1rem;
     }
 
     .content {
@@ -694,22 +699,47 @@ h2:last-of-type + ul li {
 
     h1 {
         font-size: 2rem;
+        margin-bottom: 0.5rem;
     }
 
     h2 {
         font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
 
     h3 {
         font-size: 1.2rem;
+        margin-top: 1.25rem;
+        margin-bottom: 0.5rem;
     }
 
     table {
         font-size: 0.85rem;
+        margin: 1.25rem 0;
     }
 
     th, td {
         padding: 0.75rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        margin-left: 1.1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Improve contact info spacing on mobile */
+    .contact-info {
+        margin-bottom: 1.75rem;
+        gap: 0.6rem;
     }
 
     /* Reduce icon size on tablets/mobile */
@@ -729,23 +759,47 @@ h2:last-of-type + ul li {
 
     h1 {
         font-size: 1.75rem;
+        margin-bottom: 0.4rem;
     }
 
     h2 {
         font-size: 1.3rem;
+        margin-top: 1.75rem;
+        margin-bottom: 0.8rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+        margin-top: 1.1rem;
+        margin-bottom: 0.4rem;
     }
 
     table {
         font-size: 0.8rem;
+        margin: 1rem 0;
     }
 
     th, td {
         padding: 0.5rem;
     }
 
+    p {
+        margin-bottom: 0.9rem;
+    }
+
+    ul {
+        margin-left: 1rem;
+        margin-bottom: 1.1rem;
+    }
+
+    li {
+        margin-bottom: 0.4rem;
+    }
+
     /* Keep contact info on one line on mobile */
     .contact-info {
         font-size: 1.1rem;
+        margin-bottom: 1.5rem;
         gap: 0.4rem;
     }
 
@@ -829,6 +883,13 @@ h2:last-of-type + ul li {
         font-size: 0.75rem !important;
         padding: 0 0.75rem !important;
     }
+    
+    /* Adjust card padding for extra small screens */
+    .card {
+        padding: 1rem;
+        padding-top: 3.5rem;
+        padding-bottom: 2.5rem;
+    }
 }
 
 /* ===========================
@@ -874,10 +935,33 @@ h2:last-of-type + ul li {
         margin-top: 0;
     }
 
+    .card h1 {
+        margin-bottom: 0.5rem;
+    }
+
     .card h2 {
         border-bottom: 2px solid var(--secondary-color);
         padding-bottom: 0.5rem;
+        margin-top: 1.75rem;
         margin-bottom: 1rem;
+    }
+
+    .card h3 {
+        margin-top: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card p {
+        margin-bottom: 1rem;
+    }
+
+    .card ul {
+        margin-left: 1.1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .card li {
+        margin-bottom: 0.5rem;
     }
 
     /* Container adjustments for card mode */
@@ -1008,11 +1092,11 @@ h2:last-of-type + ul li {
 
 @media print {
     @page {
-        margin: 0.2in 0.5in;
+        margin: 0.5in;
     }
 
     body {
-        font-size: 11pt;
+        font-size: 10.5pt;
         line-height: 1.3;
         color: #000;
         background: white;
@@ -1096,7 +1180,7 @@ h2:last-of-type + ul li {
         text-align: left !important;
         font-size: 14pt;
         color: #000 !important;
-        margin-bottom: 1rem;
+        margin-bottom: 0.25rem;
     }
 
     /* Hide "Data Engineer Resume" subtitle when printing resume */
@@ -1156,8 +1240,8 @@ h2:last-of-type + ul li {
         page-break-after: avoid;
         color: #000;
         border-bottom: 2px solid #000;
-        margin-top: 0.5rem;
-        margin-bottom: 0.4rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.5rem;
     }
 
     /* Reduce space before Technical Skills and Education sections */
@@ -1165,6 +1249,19 @@ h2:last-of-type + ul li {
     table + h2,
     p + h2 {
         margin-top: 0.5rem;
+    }
+
+    /* Consistent spacing for all headings in print */
+    h1, h2, h3 {
+        /* Prevent widows/orphans */
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+
+    /* Consistent spacing for all content blocks */
+    p, ul, ol, table {
+        /* Prevent awkward page breaks */
+        page-break-inside: avoid;
     }
 
     h3 {
@@ -1179,6 +1276,14 @@ h2:last-of-type + ul li {
         page-break-inside: avoid;
         line-height: 1.3;
         margin-bottom: 0.2rem;
+    }
+
+    p {
+        margin-bottom: 0.25rem;
+    }
+
+    ul {
+        margin-bottom: 0.25rem;
     }
 
     a {
@@ -1205,11 +1310,27 @@ h2:last-of-type + ul li {
         box-shadow: none;
         color: #000;
         padding: 0;
+        /* Ensure consistent spacing in print */
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+        /* Ensure job header flex properties work in print */
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
     }
 
     .job-header strong {
         color: #000;
         font-size: 11pt;
+        font-weight: 600;
+    }
+
+    /* Ensure job header spans are properly displayed */
+    .job-header span {
+        color: #000;
+        font-size: 10pt;
     }
 
     /* Override table colors for print */
@@ -1264,4 +1385,20 @@ a:focus,
 button:focus {
     outline: 2px solid var(--secondary-color);
     outline-offset: 2px;
+}
+
+/* Enhanced focus styles for better visibility */
+.theme-toggle:focus,
+.print-button:focus,
+.cv-resume-toggle:focus,
+.card-nav-dot:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+    /* Add a subtle shadow for better visibility */
+    box-shadow: 0 0 0 4px rgba(39, 174, 96, 0.3);
+}
+
+/* Remove default focus styles that might conflict */
+button::-moz-focus-inner {
+    border: 0;
 }
