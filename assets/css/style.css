@@ -998,11 +998,14 @@ h2:last-of-type + ul li {
         padding: 0;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
+        scroll-padding-top: 0;
+        overscroll-behavior-y: contain;
     }
 
     /* Individual cards */
     .card {
         scroll-snap-align: start;
+        scroll-snap-stop: always;
         min-height: 100vh;
         padding: 1.5rem;
         padding-top: 4rem; /* Space for fixed buttons */
@@ -1032,6 +1035,11 @@ h2:last-of-type + ul li {
         padding-bottom: 0.5rem;
         margin-top: 1.75rem;
         margin-bottom: 1rem;
+    }
+
+    /* Remove excessive top margin for first h2 in card */
+    .card h2:first-of-type {
+        margin-top: 0.75rem;
     }
 
     .card h3 {

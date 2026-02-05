@@ -71,10 +71,6 @@ title: Virinderpal Singh Batth | Lead Data Engineer | Resume
 - Pioneered USAA's first AWS cloud and real-time streaming project (NiFi/Kafka), transforming batch to real-time processing
 - Developed 30+ critical data pipelines in Hadoop supporting credit card risk decisioning
 
-</div>
-
-<div class="card" markdown="1">
-
 ## Technical Skills
 
 **Programming:** Python (PySpark, Pandas, SQLAlchemy, FastAPI), SQL, Bash, Git<br>
