@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Virinderpal Singh Batth | Resume
+title: Virinderpal Singh Batth | Lead Data Engineer | Resume
 ---
 
 <div class="resume-page" markdown="1">
@@ -69,7 +69,7 @@ title: Virinderpal Singh Batth | Resume
 <p class="job-header"><span><strong>HCL America Inc.</strong></span><span>Nov 2017 – Apr 2021</span></p>
 
 - Pioneered USAA's first AWS cloud and real-time streaming project (NiFi/Kafka), transforming batch to real-time processing
-- Developed 30+ critical decisioning data pipelines in Hadoop supporting credit card risk decisioning
+- Developed 30+ critical data pipelines in Hadoop supporting credit card risk decisioning
 
 </div>
 

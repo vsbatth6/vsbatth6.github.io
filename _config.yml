@@ -1,8 +1,7 @@
 # Site settings
 title: Virinderpal Singh Batth
-description: Lead Data Engineer - Portfolio and CV
+description: Lead Data Engineer with 8+ years in financial services — Snowflake, dbt, AWS, Kafka, PySpark. 95% compute reductions, 2TB+ migrations, real-time pipelines.
 author: Virinderpal Singh Batth
-email: vbatth5627@gmail.com
 
 # Build settings
 markdown: kramdown
@@ -26,3 +25,4 @@ permalink: pretty
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap

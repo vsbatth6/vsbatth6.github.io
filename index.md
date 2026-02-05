@@ -34,6 +34,14 @@ title: Virinderpal Singh Batth | Lead Data Engineer
 
 Data Engineering leader with 5+ years building enterprise data platforms in financial services and insurance. Track record of dramatic efficiency gains—95% compute reduction, 90% faster SCD Type 2 queries, and 2TB+ Hadoop-to-Snowflake migrations. Currently leading a team architecting unified operational data stores and real-time API pipelines serving transactional business insights.
 
+<div class="skill-tags">
+  <span class="skill-tag">Snowflake</span>
+  <span class="skill-tag">dbt</span>
+  <span class="skill-tag">AWS</span>
+  <span class="skill-tag">Python</span>
+  <span class="skill-tag">SQL</span>
+</div>
+
 </div>
 
 <div class="card" markdown="1">

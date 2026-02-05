@@ -21,10 +21,11 @@ html {
    =========================== */
 
 /* ----------------------------------------
-   FOREST GREEN - Currently Active
-   ---------------------------------------- */
+   FOREST GREEN
+   ----------------------------------------
 
 /* Light Mode */
+/*
 :root {
     --primary-color: #1a4d2e;
     --secondary-color: #27ae60;
@@ -40,6 +41,7 @@ html {
 }
 
 /* Dark Mode - Manual toggle */
+/*
 :root[data-theme="dark"] {
     --primary-color: #7cb587;
     --secondary-color: #5a9a6e;
@@ -55,6 +57,7 @@ html {
 }
 
 /* Dark Mode - Auto (system preference) */
+/*
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
         --primary-color: #7cb587;
@@ -70,6 +73,7 @@ html {
         --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     }
 }
+*/
 
 /* ----------------------------------------
    WARM CHARCOAL - Minimalist & Modern
@@ -139,6 +143,38 @@ html {
     --link-hover: #2980b9;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+:root[data-theme="dark"] {
+    --primary-color: #5dade2;
+    --secondary-color: #5dade2;
+    --accent-color: #ec7063;
+    --text-color: #e0e0e0;
+    --text-light: #a0a0a0;
+    --border-color: #3a3a3a;
+    --bg-color: #1a1a1a;
+    --section-bg: #252525;
+    --link-color: #5dade2;
+    --link-hover: #85c1e9;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    --thead-bg: #1e3a52;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #5dade2;
+        --secondary-color: #5dade2;
+        --accent-color: #ec7063;
+        --text-color: #e0e0e0;
+        --text-light: #a0a0a0;
+        --border-color: #3a3a3a;
+        --bg-color: #1a1a1a;
+        --section-bg: #252525;
+        --link-color: #5dade2;
+        --link-hover: #85c1e9;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        --thead-bg: #1e3a52;
+    }
+}
 */
 
 /* ELEGANT PURPLE
@@ -157,7 +193,7 @@ html {
 }
 */
 
-/* MIDNIGHT BLUE
+/* MIDNIGHT BLUE - Currently Active */
 :root {
     --primary-color: #0d1b2a;
     --secondary-color: #1b4965;
@@ -171,7 +207,38 @@ html {
     --link-hover: #0d1b2a;
     --shadow: 0 2px 8px rgba(13, 27, 42, 0.1);
 }
-*/
+
+:root[data-theme="dark"] {
+    --primary-color: #62b6cb;
+    --secondary-color: #5a9fb8;
+    --accent-color: #8ed7e8;
+    --text-color: #cbd5e1;
+    --text-light: #94a3b8;
+    --border-color: #2d4a5c;
+    --bg-color: #0a1520;
+    --section-bg: #132938;
+    --link-color: #62b6cb;
+    --link-hover: #8ed7e8;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    --thead-bg: #0d2838;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #62b6cb;
+        --secondary-color: #5a9fb8;
+        --accent-color: #8ed7e8;
+        --text-color: #cbd5e1;
+        --text-light: #94a3b8;
+        --border-color: #2d4a5c;
+        --bg-color: #0a1520;
+        --section-bg: #132938;
+        --link-color: #62b6cb;
+        --link-hover: #8ed7e8;
+        --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        --thead-bg: #0d2838;
+    }
+}
 
 /* ===========================
    Dark Mode Specific Overrides
@@ -186,12 +253,12 @@ html {
 
 /* Table header in dark mode */
 :root[data-theme="dark"] thead {
-    background-color: #1e2f28;
+    background-color: var(--thead-bg, var(--primary-color));
 }
 
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) thead {
-        background-color: #1e2f28;
+        background-color: var(--thead-bg, var(--primary-color));
     }
 }
 
@@ -312,6 +379,27 @@ h3 {
     vertical-align: middle;
 }
 
+/* Skill Tags */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.75rem;
+    background-color: var(--section-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
 /* ===========================
    Links
    =========================== */
@@ -387,7 +475,7 @@ strong {
     padding: 0.5rem 0.75rem;
     border-radius: 6px;
     border: 1.5px solid transparent;
-    box-shadow: 0 3px 10px rgba(39, 174, 96, 0.35);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .job-header strong {
@@ -1286,6 +1374,19 @@ h2:last-of-type + ul li {
         margin-bottom: 0.25rem;
     }
 
+    .skill-tags {
+        margin-top: 0.4rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .skill-tag {
+        background: var(--section-bg);
+        border: 1px solid #666;
+        border-radius: 20px;
+        padding: 0.2rem 0.6rem;
+        font-size: 9pt;
+    }
+
     a {
         color: #000;
         text-decoration: none;
@@ -1395,7 +1496,7 @@ button:focus {
     outline: 2px solid var(--secondary-color);
     outline-offset: 2px;
     /* Add a subtle shadow for better visibility */
-    box-shadow: 0 0 0 4px rgba(39, 174, 96, 0.3);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Remove default focus styles that might conflict */
