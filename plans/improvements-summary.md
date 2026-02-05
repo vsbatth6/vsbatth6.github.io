@@ -30,6 +30,9 @@
 - **Resource preloading** - `<link rel="preload" as="style">` for `style.css`
 - **Minified inline SVGs** - Removed redundant `xmlns` from all 9 inline SVGs across layout and content
 
+### Analytics
+- **GoatCounter integration** - Privacy-first, cookie-free pageview analytics. Single `<script>` tag in `default.html` using pinned v5 with Subresource Integrity. Tracks pageviews, unique visitors, referrers, browsers, devices. No consent banner required.
+
 ### SEO (structured data)
 - **JSON-LD Person schema** - Name, job title, employer, sameAs links, knowsAbout skills
 
@@ -62,7 +65,6 @@
 ### Functionality
 - Advanced filtering — filter experience by technology or industry
 - Search — quick search within CV content
-- Privacy-focused analytics — visitor engagement without third-party tracking
 
 ### Technical
 - Service worker / PWA — offline support and installability
@@ -83,4 +85,4 @@
 
 ---
 
-*Last updated: February 4, 2026*
+*Last updated: February 5, 2026*
