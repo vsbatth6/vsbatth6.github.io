@@ -1042,6 +1042,12 @@ h2:last-of-type + ul li {
         margin-top: 0.5rem;
     }
 
+    /* Reduce margin before Technical Skills and Education sections */
+    .card ul + h2,
+    .card p + h2 {
+        margin-top: 0.75rem;
+    }
+
     .card h3 {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
