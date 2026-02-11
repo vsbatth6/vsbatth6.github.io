@@ -30,17 +30,20 @@ title: Virinderpal Singh Batth | Lead Data Engineer
   </a>
 </div>
 
-## Professional Summary
-
-Data Engineering leader with 5+ years building enterprise data platforms in financial services and insurance. Track record of dramatic efficiency gains—95% compute reduction, 90% faster SCD Type 2 queries, and 2TB+ Hadoop-to-Snowflake migrations. Currently leading a team architecting unified operational data stores and real-time API pipelines serving transactional business insights.
-
 <div class="skill-tags">
   <span class="skill-tag">Snowflake</span>
   <span class="skill-tag">dbt</span>
   <span class="skill-tag">AWS</span>
   <span class="skill-tag">Python</span>
   <span class="skill-tag">SQL</span>
+  <span class="skill-tag">Bash</span>
+  <span class="skill-tag">Git</span>
+  <span class="skill-tag">JSON</span>
 </div>
+
+## Professional Summary
+
+Data Engineering leader with 5+ years building enterprise data platforms in financial services and insurance. Track record of dramatic efficiency gains—95% compute reduction, 90% faster SCD Type 2 queries, and 2TB+ Hadoop-to-Snowflake migrations. Currently leading a team architecting unified operational data stores and real-time API pipelines serving transactional business insights.
 
 </div>
 
@@ -48,9 +51,8 @@ Data Engineering leader with 5+ years building enterprise data platforms in fina
 
 ## Experience
 
-### Lead Data Engineer | Insurance
 
-<p class="job-header"><span><strong>evolv Consulting</strong></span><span>Oct 2025 – Present</span></p>
+<p class="job-header"><span><strong>Lead Data Enginer, evolv Consulting</strong></span><span><strong>Oct 2025 – Present</strong></span></p>
 
 - Leading and growing a team of 3+ data engineers to architect an insurance client's first unified operational data store in Snowflake using dbt
 - Defining master data standards across 4+ legacy platforms, resolving data overlaps between sub-companies
@@ -61,9 +63,7 @@ Data Engineering leader with 5+ years building enterprise data platforms in fina
 
 <div class="card" markdown="1">
 
-### Data Engineer | Financial Credit Risk
-
-<p class="job-header"><span><strong>USAA</strong></span><span>Apr 2021 – Oct 2025</span></p>
+<p class="job-header"><span><strong>Data Engineer, USAA</strong></span><span><strong>Apr 2021 – Oct 2025</strong></span></p>
 
 - Resolved critical Snowflake performance bottleneck, reducing compute usage by **95%** and significantly decreasing query costs
 - Optimized SCD Type 2 queries achieving **90% reduction** in running time (3 hours → 15 minutes) and 70% reduction in data scan volume
@@ -78,9 +78,7 @@ Data Engineering leader with 5+ years building enterprise data platforms in fina
 
 <div class="card" markdown="1">
 
-### Big Data Consultant | Financial Services
-
-<p class="job-header"><span><strong>HCL America Inc.</strong></span><span>Nov 2017 – Apr 2021</span></p>
+<p class="job-header"><span><strong>Big Data Consultant, HCL America Inc.</strong></span><span><strong>Nov 2017 – Apr 2021</strong></span></p>
 
 - Pioneered the first project at USAA to utilize AWS cloud and real-time streaming (NiFi/Kafka), transforming batch to real-time processing
 - Established AWS S3 to HDFS file transfer routes, enabling cloud-to-on-premise data integration
