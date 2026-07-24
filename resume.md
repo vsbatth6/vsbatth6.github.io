@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Virinderpal Singh Batth | Lead Data Engineer | Resume
+title: Virinderpal Singh Batth | Senior Data Engineer | Resume
 ---
 
 <div class="resume-page" markdown="1">
@@ -9,7 +9,7 @@ title: Virinderpal Singh Batth | Lead Data Engineer | Resume
 
 # Virinderpal Singh Batth
 
-**Lead Data Engineer**
+**Senior Data Engineer**
 
 <div class="contact-info">
   <a href="https://linkedin.com/in/vsbatth" class="linkedin-link" aria-label="Visit LinkedIn profile">
@@ -36,8 +36,8 @@ title: Virinderpal Singh Batth | Lead Data Engineer | Resume
   <span class="skill-tag">Snowflake</span>
   <span class="skill-tag">dbt</span>
   <span class="skill-tag">AWS</span>
-  <span class="skill-tag">Python</span>
   <span class="skill-tag">SQL</span>
+  <span class="skill-tag">Python</span>
   <span class="skill-tag">Bash</span>
   <span class="skill-tag">Git</span>
   <span class="skill-tag">JSON</span>
@@ -45,11 +45,18 @@ title: Virinderpal Singh Batth | Lead Data Engineer | Resume
 
 ## Experience
 
-<p class="job-header"><span><strong>Lead Data Engineer, evolv Consulting</strong></span><span><strong>Oct 2025 – Present</strong></span></p>
+<p class="job-header"><span><strong>Senior Data Engineer, evolv Consulting</strong></span><span><strong>Oct 2025 – Present</strong></span></p>
 
-- Leading and growing a team of 3+ data engineers to architect an insurance client's first unified operational data store in Snowflake using dbt
-- Defining master data standards across 4+ legacy platforms, resolving data overlaps between sub-companies
-- Architecting high-performance data pipelines serving a transactional Kong API layer for real-time business insights
+<p class="client-header"><span><strong>Client: SoFi</strong></span><span>Jul 2026 – Present</span></p>
+
+- Building the enterprise data warehouse for SoFi Plus, SoFi's premium subscription membership bundling boosted rewards, preferred rates, and member benefits
+- Partnering with the Data Products team to model membership and subscription data supporting the program's 2026 relaunch as a paid tier
+
+<p class="client-header"><span><strong>Client: Shelter Insurance</strong></span><span>Oct 2025 – Jun 2026</span></p>
+
+- Led and grew a team of 3+ data engineers to architect Shelter's first unified operational data store in Snowflake using dbt
+- Defined master data standards across 4+ legacy platforms, resolving data overlaps between sub-companies
+- Architected high-performance data pipelines serving a transactional Kong API layer for real-time business insights
 - Built reusable dbt framework for automated data extracts to AWS S3, enabling self-service reporting
 
 </div>
@@ -67,20 +74,17 @@ title: Virinderpal Singh Batth | Lead Data Engineer | Resume
 - Architected cross-organizational data lake POC with AWS S3, reducing transfer time by 50%
 - Enhanced PII/PCI/PHI security with data masking, tokenization, and RBAC
 
+*Earlier experience: Big Data Consultant, HCL America Inc. (Nov 2017 – Apr 2021) — full details at [vsbatth.com](https://vsbatth.com)*
+
 </div>
 
 <div class="card" markdown="1">
 
-<p class="job-header"><span><strong>Big Data Consultant, HCL America Inc.</strong></span><span><strong>Nov 2017 – Apr 2021</strong></span></p>
-
-- Pioneered USAA's first AWS cloud and real-time streaming project (NiFi/Kafka), transforming batch to real-time processing
-- Developed 30+ critical data pipelines in Hadoop supporting credit card risk decisioning
-
 ## Technical Skills
 
-**Programming:** Python (PySpark, Pandas, SQLAlchemy, FastAPI), SQL, Bash, Git<br>
+**Programming:** SQL, Python, Bash, Git<br>
 **Data Engineering:** dbt, Kafka, Flink, NiFi, IBM DataStage<br>
-**Cloud & Platforms:** AWS (S3, EC2, Redshift, Lambda, Athena), Snowflake, Hadoop, DB2<br>
+**Cloud & Platforms:** Snowflake, AWS (S3, EC2, Redshift, Lambda, Athena), Hadoop, DB2<br>
 **Practices:** CI/CD, Data Governance, RBAC, Data Masking, Tokenization
 
 ## Education

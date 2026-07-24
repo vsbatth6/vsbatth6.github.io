@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Virinderpal Singh Batth | Lead Data Engineer
+title: Virinderpal Singh Batth | Senior Data Engineer
 ---
 
 <div class="card" markdown="1">
 
 # Virinderpal Singh Batth
 
-**Lead Data Engineer**
+**Senior Data Engineer**
 
 <div class="contact-info">
   <a href="https://linkedin.com/in/vsbatth" class="linkedin-link" aria-label="Visit LinkedIn profile">
@@ -34,8 +34,8 @@ title: Virinderpal Singh Batth | Lead Data Engineer
   <span class="skill-tag">Snowflake</span>
   <span class="skill-tag">dbt</span>
   <span class="skill-tag">AWS</span>
-  <span class="skill-tag">Python</span>
   <span class="skill-tag">SQL</span>
+  <span class="skill-tag">Python</span>
   <span class="skill-tag">Bash</span>
   <span class="skill-tag">Git</span>
   <span class="skill-tag">JSON</span>
@@ -43,7 +43,7 @@ title: Virinderpal Singh Batth | Lead Data Engineer
 
 ## Professional Summary
 
-Data Engineering leader with 5+ years building enterprise data platforms in financial services and insurance. Track record of dramatic efficiency gains—95% compute reduction, 90% faster SCD Type 2 queries, and 2TB+ Hadoop-to-Snowflake migrations. Currently leading a team architecting unified operational data stores and real-time API pipelines serving transactional business insights.
+Senior Data Engineer with 8+ years building enterprise data platforms in financial services and insurance. Track record of dramatic efficiency gains—95% compute reduction, 90% faster SCD Type 2 queries, and 2TB+ Hadoop-to-Snowflake migrations. Recently led a team architecting an insurer's first unified operational data store; currently building the SoFi Plus enterprise data warehouse for SoFi's Data Products team.
 
 </div>
 
@@ -52,11 +52,18 @@ Data Engineering leader with 5+ years building enterprise data platforms in fina
 ## Experience
 
 
-<p class="job-header"><span><strong>Lead Data Enginer, evolv Consulting</strong></span><span><strong>Oct 2025 – Present</strong></span></p>
+<p class="job-header"><span><strong>Senior Data Engineer, evolv Consulting</strong></span><span><strong>Oct 2025 – Present</strong></span></p>
 
-- Leading and growing a team of 3+ data engineers to architect an insurance client's first unified operational data store in Snowflake using dbt
-- Defining master data standards across 4+ legacy platforms, resolving data overlaps between sub-companies
-- Architecting high-performance data pipelines serving a transactional Kong API layer for real-time business insights
+<p class="client-header"><span><strong>Client: SoFi</strong></span><span>Jul 2026 – Present</span></p>
+
+- Building the enterprise data warehouse for SoFi Plus, SoFi's premium subscription membership bundling boosted rewards, preferred rates, and member benefits
+- Partnering with the Data Products team to model membership and subscription data supporting the program's 2026 relaunch as a paid tier
+
+<p class="client-header"><span><strong>Client: Shelter Insurance</strong></span><span>Oct 2025 – Jun 2026</span></p>
+
+- Led and grew a team of 3+ data engineers to architect Shelter's first unified operational data store in Snowflake using dbt
+- Defined master data standards across 4+ legacy platforms, resolving data overlaps between sub-companies
+- Architected high-performance data pipelines serving a transactional Kong API layer for real-time business insights
 - Built reusable dbt framework for automated data extracts to AWS S3, enabling self-service reporting
 
 </div>
@@ -96,9 +103,9 @@ Data Engineering leader with 5+ years building enterprise data platforms in fina
 
 |Category             |Technologies                                                         |
 |---------------------|---------------------------------------------------------------------|
-|**Programming**      |Python (PySpark, Pandas, SQLAlchemy, FastAPI), SQL, Bash, Git        |
+|**Programming**      |SQL, Python, Bash, Git                                               |
 |**Data Engineering** |dbt, Kafka, Flink, NiFi, IBM DataStage, REST APIs                    |
-|**Cloud & Platforms**|AWS (S3, EC2, Redshift, Lambda, Athena), Snowflake, Hadoop, DB2      |
+|**Cloud & Platforms**|Snowflake, AWS (S3, EC2, Redshift, Lambda, Athena), Hadoop, DB2      |
 |**Data Formats**     |JSON, Parquet                                                        |
 |**Visualization**    |Apache Superset                                                      |
 |**Practices**        |CI/CD, Data Governance, RBAC, Data Masking, Tokenization             |
