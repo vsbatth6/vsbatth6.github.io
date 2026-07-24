@@ -43,7 +43,7 @@ title: Virinderpal Singh Batth | Senior Data Engineer
 
 ## Professional Summary
 
-Senior Data Engineer with 8+ years building enterprise data platforms in financial services and insurance. Track record of dramatic efficiency gains—95% compute reduction, 90% faster SCD Type 2 queries, and 2TB+ Hadoop-to-Snowflake migrations. Recently led a team architecting an insurer's first unified operational data store; currently building the SoFi Plus enterprise data warehouse for SoFi's Data Products team.
+Senior Data Engineer with 8+ years building enterprise data platforms in financial services and insurance. Track record of dramatic efficiency gains—95% compute reduction, 90% faster SCD Type 2 queries, and 2TB+ Hadoop-to-Snowflake migrations. Recently led a team architecting an insurer's first unified operational data store; currently building the SoFi Plus enterprise data warehouse on SoFi's Data Products team.
 
 </div>
 
@@ -57,7 +57,7 @@ Senior Data Engineer with 8+ years building enterprise data platforms in financi
 <p class="client-header"><span><strong>Client: SoFi</strong></span><span>Jul 2026 – Present</span></p>
 
 - Building the enterprise data warehouse for SoFi Plus, SoFi's premium subscription membership bundling boosted rewards, preferred rates, and member benefits
-- Partnering with the Data Products team to model membership and subscription data supporting the program's 2026 relaunch as a paid tier
+- As part of the Data Products team, modeling membership and subscription data supporting the program's 2026 relaunch as a paid tier
 
 <p class="client-header"><span><strong>Client: Shelter Insurance</strong></span><span>Oct 2025 – Jun 2026</span></p>
 

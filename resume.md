@@ -50,7 +50,7 @@ title: Virinderpal Singh Batth | Senior Data Engineer | Resume
 <p class="client-header"><span><strong>Client: SoFi</strong></span><span>Jul 2026 – Present</span></p>
 
 - Building the enterprise data warehouse for SoFi Plus, SoFi's premium subscription membership bundling boosted rewards, preferred rates, and member benefits
-- Partnering with the Data Products team to model membership and subscription data supporting the program's 2026 relaunch as a paid tier
+- As part of the Data Products team, modeling membership and subscription data supporting the program's 2026 relaunch as a paid tier
 
 <p class="client-header"><span><strong>Client: Shelter Insurance</strong></span><span>Oct 2025 – Jun 2026</span></p>
 
