@@ -43,7 +43,7 @@ title: Virinderpal Singh Batth | Senior Data Engineer
 
 ## Professional Summary
 
-Senior Data Engineer with 8+ years building enterprise data platforms in financial services and insurance. Track record of dramatic efficiency gains—95% compute reduction, 90% faster SCD Type 2 queries, and 2TB+ Hadoop-to-Snowflake migrations. Recently led a team architecting an insurer's first unified operational data store; currently building the SoFi Plus enterprise data warehouse on SoFi's Data Products team.
+Senior Data Engineer with 8+ years building cloud data warehouses and the data models behind analytics and data science. Deep expertise in Snowflake, dbt, SQL and dimensional modeling, with batch and real-time (Kafka) pipelines built for security and reliability. Track record of dramatic efficiency gains—95% compute reduction, 90% faster SCD Type 2 queries, and 2TB+ Hadoop-to-Snowflake migrations. Recently led a team architecting an insurer's first unified operational data store; currently building the SoFi Plus enterprise data warehouse on SoFi's Data Products team.
 
 </div>
 
@@ -56,15 +56,17 @@ Senior Data Engineer with 8+ years building enterprise data platforms in financi
 
 <p class="client-header"><span><strong>Client: SoFi</strong></span><span>Jul 2026 – Present</span></p>
 
-- Building the enterprise data warehouse for SoFi Plus, SoFi's premium subscription membership bundling boosted rewards, preferred rates, and member benefits
-- As part of the Data Products team, modeling membership and subscription data supporting the program's 2026 relaunch as a paid tier
+- Building the dimensional (fact/dimension) enterprise data warehouse for SoFi Plus, SoFi's premium subscription membership, as part of the Data Products team, supporting the program's 2026 relaunch as a paid tier
+- Built a Markov chain Lifetime Value (LTV) model in dbt, collaborating with the data science team on the underlying mathematical model
+- Modeled SoFi Plus membership lifecycle metrics (active, churned, dormant and total members) and delivered the datasets data science used to build churn-risk models
+- Designed point-in-time data models for data science teams, linking SoFi Plus membership state to exact transaction timestamps and gross payer records
 
 <p class="client-header"><span><strong>Client: Shelter Insurance</strong></span><span>Oct 2025 – Jun 2026</span></p>
 
 - Led and grew a team of 3+ data engineers to architect Shelter's first unified operational data store in Snowflake using dbt
 - Defined master data standards across 4+ legacy platforms, resolving data overlaps between sub-companies
 - Architected high-performance data pipelines serving a transactional Kong API layer for real-time business insights
-- Built reusable dbt framework for automated data extracts to AWS S3, enabling self-service reporting
+- Built reusable dbt framework for automated data extracts to AWS S3, adopted by 4 other teams and enabling self-service reporting
 
 </div>
 
@@ -104,7 +106,8 @@ Senior Data Engineer with 8+ years building enterprise data platforms in financi
 |Category             |Technologies                                                         |
 |---------------------|---------------------------------------------------------------------|
 |**Programming**      |SQL, Python, Bash, Git                                               |
-|**Data Engineering** |dbt, Kafka, Flink, NiFi, IBM DataStage, REST APIs                    |
+|**Data Engineering** |dbt, Spark/PySpark, Kafka, Flink, NiFi, IBM DataStage, REST APIs     |
+|**Data Modeling**    |Dimensional Modeling (Fact/Dimension), SCD Type 2, Data Warehousing  |
 |**Cloud & Platforms**|Snowflake, AWS (S3, EC2, Redshift, Lambda, Athena), Hadoop, DB2      |
 |**Data Formats**     |JSON, Parquet                                                        |
 |**Visualization**    |Apache Superset                                                      |

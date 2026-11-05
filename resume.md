@@ -49,15 +49,17 @@ title: Virinderpal Singh Batth | Senior Data Engineer | Resume
 
 <p class="client-header"><span><strong>Client: SoFi</strong></span><span>Jul 2026 – Present</span></p>
 
-- Building the enterprise data warehouse for SoFi Plus, SoFi's premium subscription membership bundling boosted rewards, preferred rates, and member benefits
-- As part of the Data Products team, modeling membership and subscription data supporting the program's 2026 relaunch as a paid tier
+- Building the dimensional (fact/dimension) enterprise data warehouse for SoFi Plus, SoFi's premium subscription membership, as part of the Data Products team, supporting the program's 2026 relaunch as a paid tier
+- Built a Markov chain Lifetime Value (LTV) model in dbt, collaborating with the data science team on the underlying mathematical model
+- Modeled SoFi Plus membership lifecycle metrics (active, churned, dormant and total members) and delivered the datasets data science used to build churn-risk models
+- Designed point-in-time data models for data science teams, linking SoFi Plus membership state to exact transaction timestamps and gross payer records
 
 <p class="client-header"><span><strong>Client: Shelter Insurance</strong></span><span>Oct 2025 – Jun 2026</span></p>
 
 - Led and grew a team of 3+ data engineers to architect Shelter's first unified operational data store in Snowflake using dbt
 - Defined master data standards across 4+ legacy platforms, resolving data overlaps between sub-companies
 - Architected high-performance data pipelines serving a transactional Kong API layer for real-time business insights
-- Built reusable dbt framework for automated data extracts to AWS S3, enabling self-service reporting
+- Built reusable dbt framework for automated data extracts to AWS S3, adopted by 4 other teams and enabling self-service reporting
 
 </div>
 
@@ -83,7 +85,8 @@ title: Virinderpal Singh Batth | Senior Data Engineer | Resume
 ## Technical Skills
 
 **Programming:** SQL, Python, Bash, Git<br>
-**Data Engineering:** dbt, Kafka, Flink, NiFi, IBM DataStage<br>
+**Data Engineering:** dbt, Spark/PySpark, Kafka, Flink, NiFi, IBM DataStage<br>
+**Data Modeling:** Dimensional Modeling (Fact/Dimension), SCD Type 2, Data Warehousing<br>
 **Cloud & Platforms:** Snowflake, AWS (S3, EC2, Redshift, Lambda, Athena), Hadoop, DB2<br>
 **Practices:** CI/CD, Data Governance, RBAC, Data Masking, Tokenization
 

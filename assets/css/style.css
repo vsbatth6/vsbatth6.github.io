@@ -1221,8 +1221,8 @@ h2:last-of-type + ul li {
     }
 
     body {
-        font-size: 10.5pt;
-        line-height: 1.3;
+        font-size: 10pt;
+        line-height: 1.25;
         color: #000;
         background: white;
         margin: 0;
@@ -1336,7 +1336,7 @@ h2:last-of-type + ul li {
 
     /* Show full URLs in print */
     .linkedin-link::after {
-        content: " linkedin.com/in/vbatth";
+        content: " linkedin.com/in/vsbatth";
         margin-left: 0.25rem;
     }
 
@@ -1403,8 +1403,8 @@ h2:last-of-type + ul li {
 
     li {
         page-break-inside: avoid;
-        line-height: 1.3;
-        margin-bottom: 0.2rem;
+        line-height: 1.25;
+        margin-bottom: 0.1rem;
     }
 
     p {
